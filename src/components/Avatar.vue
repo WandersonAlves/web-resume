@@ -27,6 +27,9 @@
   padding-left: 5px;
   padding-right: 5px;
 }
+.icon-fix {
+  font-size: 2.6em;
+}
 @media (max-width: 1024px)
 {
   .responsive-text {
@@ -51,6 +54,7 @@
       <a href="https://www.linkedin.com/in/wanderson-alves-575279a1/" target='_blank'><i class="fa fa-linkedin-square white icon-size" aria-hidden="true"></i></a>
       <a href="https://github.com/WandersonAlves" target='_blank'><i class="fa fa-github white icon-size" aria-hidden="true"></i></a>
       <a href="https://twitter.com/Popoto_" target='_blank'><i class="fa fa-twitter white icon-size" aria-hidden="true"></i></a>
+      <a href="mailto:wandersonalvesferreira2012@gmail.com"><i class="fa fa-envelope white icon-fix icon-size" aria-hidden="true"></i></a>
   </div>
 </div>
 </template>
