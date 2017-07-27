@@ -48,9 +48,9 @@
     <img src="/src/assets/avatar.jpg" class="avatar center-block" />
   </div>
   <div class="col-md-6 col-xs-12 line-height margin responsive-text">
-    <p class="boldier white">Hi, Wanderson Alves over here!</p>
-    <p class="boldier white">I’m a Front-End Developer & UI Designer</p>
-    <p class="boldier white">Currently living in Recife, Brazil</p>
+    <p class="boldier white">{{ 'homeFirstP' | translate }}</p>
+    <p class="boldier white">{{ 'homeSecondP' | translate }}</p>
+    <p class="boldier white">{{ 'homeThirdP' | translate }}</p>
       <a href="https://www.linkedin.com/in/wanderson-alves-575279a1/" target='_blank'><i class="fa fa-linkedin-square white icon-size" aria-hidden="true"></i></a>
       <a href="https://github.com/WandersonAlves" target='_blank'><i class="fa fa-github white icon-size" aria-hidden="true"></i></a>
       <a href="https://twitter.com/Popoto_" target='_blank'><i class="fa fa-twitter white icon-size" aria-hidden="true"></i></a>

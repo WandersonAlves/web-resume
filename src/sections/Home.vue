@@ -19,8 +19,10 @@
 <template>
 <div>
   <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand">enUS</a>
+      </div>
     </div>
   </nav>
   <div class="jumbotron">
