@@ -9,6 +9,7 @@
 .jumbotron {
     height: 100vh;
     background-image: url(/src/assets/home-bg.jpg);
+    margin-bottom: 0px;
 }
 </style>
 
