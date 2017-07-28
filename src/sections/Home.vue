@@ -56,18 +56,6 @@
     background-position: 0px -3000px;
   }
 }
-
-@media (max-width: 1024px) {
-  .marquee {
-    width: 250px;
-  }
-}
-
-@media (max-width: 768px) {
-  .marquee {
-    width: 120px;
-  }
-}
 </style>
 
 <template>
