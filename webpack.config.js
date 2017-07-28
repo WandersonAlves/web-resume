@@ -107,7 +107,7 @@ if (process.env.NODE_ENV === 'production') {
     }),
     new GoogleFontsPlugin({
 			fonts: [
-				{ family: "Open Sans Pro" , variants: ["300", "400"]}
+				{ family: "Open Sans" , variants: ["300", "400"]}
 			]
 		})
   ])
