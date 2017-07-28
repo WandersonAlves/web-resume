@@ -9,15 +9,52 @@
 
 .jumbotron {
   height: 100vh;
-  background-image: url(/src/assets/home-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url(/src/assets/bg.png);
   background-position: center center;
   margin-bottom: 0px;
+  -webkit-animation: 100s scroll infinite linear;
+  -moz-animation: 100s scroll infinite linear;
+  -o-animation: 100s scroll infinite linear;
+  -ms-animation: 100s scroll infinite linear;
+  animation: 100s scroll infinite linear;
 }
 
 .navbar-brand {
   height: none;
+}
+
+.white {
+  color: white;
+}
+
+@-webkit-keyframes scroll {
+  100% {
+    background-position: 0px -3000px;
+  }
+}
+
+@-moz-keyframes scroll {
+  100% {
+    background-position: 0px -3000px;
+  }
+}
+
+@-o-keyframes scroll {
+  100% {
+    background-position: 0px -3000px;
+  }
+}
+
+@-ms-keyframes scroll {
+  100% {
+    background-position: 0px -3000px;
+  }
+}
+
+@keyframes scroll {
+  100% {
+    background-position: 0px -3000px;
+  }
 }
 </style>
 
@@ -25,9 +62,9 @@
 <div>
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
-      <div class="navbar-header navbar-right">
+      <div class="navbar-header">
         <a class="navbar-brand" href="#">
-        <img alt="Brand" @click="changeLocale()" :src="currentFlag">
+          <img alt="Brand" @click="changeLocale()" :src="currentFlag">
         </a>
       </div>
     </div>
@@ -46,6 +83,10 @@ export default {
   name: 'Home',
   components: {
     Avatar
+  },
+  data() {
+    return {
+    }
   },
   computed: {
     currentFlag: function() {
