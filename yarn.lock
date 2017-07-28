@@ -3872,6 +3872,14 @@ vue@^2.3.3:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.4.2.tgz#a9855261f191c978cc0dc1150531b8d08149b58c"
 
+vuex-i18n@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/vuex-i18n/-/vuex-i18n-1.4.3.tgz#b57feefc460fa8a1b8cc9f05288a5e71363aa069"
+
+vuex@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/vuex/-/vuex-2.3.1.tgz#cde8e997c1f9957719bc7dea154f9aa691d981a6"
+
 watchpack@^1.3.1:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-1.4.0.tgz#4a1472bcbb952bd0a9bb4036801f954dfb39faac"
