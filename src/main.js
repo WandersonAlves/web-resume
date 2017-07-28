@@ -19,7 +19,13 @@ Vue.use(bootstrap);
 Vue.i18n.add('en', enUS);
 Vue.i18n.add('pt', ptBR);
 
-Vue.i18n.set('pt');
+const currentLocale = navigator.language;
+if (currentLocale === 'pt-BR') {
+  Vue.i18n.set('pt');
+}
+else {
+  Vue.i18n.set('en');
+}
 
 new Vue({
   el: '#app',
