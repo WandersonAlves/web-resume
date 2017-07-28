@@ -28,7 +28,7 @@
   padding-right: 5px;
 }
 .icon-fix {
-  font-size: 2.6em;
+  font-size: 2.5em;
 }
 @media (max-width: 1024px)
 {
