@@ -103,6 +103,11 @@ if (process.env.NODE_ENV === 'production') {
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
-    })
+    }),
+    new GoogleFontsPlugin({
+			fonts: [
+				{ family: "Open Sans Pro" , variants: ["300", "400"]}
+			]
+		})
   ])
 }
