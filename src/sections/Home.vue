@@ -9,15 +9,48 @@
 
 .jumbotron {
   height: 100vh;
-  background-image: url(/src/assets/home-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url(/src/assets/bg.png);
   background-position: center center;
   margin-bottom: 0px;
+  -webkit-animation:100s scroll infinite linear;
+  -moz-animation:100s scroll infinite linear;
+  -o-animation:100s scroll infinite linear;
+  -ms-animation:100s scroll infinite linear;
+  animation:100s scroll infinite linear;
 }
 
 .navbar-brand {
   height: none;
+}
+
+@-webkit-keyframes scroll{
+  100%{
+    background-position:0px -3000px;
+  }
+}
+
+@-moz-keyframes scroll{
+  100%{
+    background-position:0px -3000px;
+  }
+}
+
+@-o-keyframes scroll{
+  100%{
+    background-position:0px -3000px;
+  }
+}
+
+@-ms-keyframes scroll{
+  100%{
+    background-position:0px -3000px;
+  }
+}
+
+@keyframes scroll{
+  100%{
+    background-position:0px -3000px;
+  }
 }
 </style>
 
