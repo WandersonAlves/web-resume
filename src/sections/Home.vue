@@ -60,6 +60,12 @@
   z-index: -1;
   width:100%;
 }
+@media (max-width: 1023px) {
+  #video-background {
+    width: auto;
+    height: 100vh;
+  }
+}
 </style>
 
 <template>

@@ -46,10 +46,6 @@
   }
   .jumbotron p {
     font-size: 1.2em;
-    color: black;
-  }
-  .jumbotron i {
-    color: black;
   }
 }
 </style>
