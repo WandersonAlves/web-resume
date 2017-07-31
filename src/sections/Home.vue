@@ -82,6 +82,7 @@
   <div class="jumbotron">
     <video id="video-background" preload muted autoplay loop>
       <source src="/src/assets/video.mp4" type="video/mp4">
+      <source src="/src/assets/video.webm" type="video/webm">
     </video>
     <div class="container">
       <avatar></avatar>
