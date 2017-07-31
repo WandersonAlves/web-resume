@@ -1,12 +1,15 @@
 import Vue from 'vue'
 import Vuex from 'vuex';
 import vuexI18n from 'vuex-i18n';
+import VueParticles from 'vue-particles';
 import App from './App.vue'
 
 import bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
 import enUSTranslate from './i18n/enUS.js';
 import ptBRTranslate from './i18n/ptBR.js';
 
+
+Vue.use(VueParticles);
 Vue.use(Vuex);
 
 const store = new Vuex.Store();

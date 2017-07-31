@@ -9,14 +9,8 @@
 
 .jumbotron {
   height: 100vh;
-  background-image: url(/src/assets/bg.png);
-  background-position: center center;
+  background: transparent;
   margin-bottom: 0px;
-  -webkit-animation: 100s scroll infinite linear;
-  -moz-animation: 100s scroll infinite linear;
-  -o-animation: 100s scroll infinite linear;
-  -ms-animation: 100s scroll infinite linear;
-  animation: 100s scroll infinite linear;
 }
 
 .navbar-brand {
@@ -56,6 +50,16 @@
     background-position: 0px -3000px;
   }
 }
+#video-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+  width:100%;
+}
 </style>
 
 <template>
@@ -70,6 +74,9 @@
     </div>
   </nav>
   <div class="jumbotron">
+    <video id="video-background" preload muted autoplay loop>
+      <source src="/src/assets/video.mp4" type="video/mp4">
+    </video>
     <div class="container">
       <avatar></avatar>
     </div>
