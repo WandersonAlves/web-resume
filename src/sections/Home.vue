@@ -51,7 +51,7 @@
     </div>
   </nav>
   <div class="jumbotron">
-    <video id="video-background" preload muted autoplay loop>
+    <video id="video-background" muted autoplay loop poster="/src/assets/bg.png">
       <source src="/src/assets/video.mp4" type="video/mp4">
       <source src="/src/assets/video.webm" type="video/webm">
     </video>
