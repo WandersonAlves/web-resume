@@ -40,7 +40,7 @@
 </style>
 
 <template>
-<div>
+<section>
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -51,7 +51,7 @@
     </div>
   </nav>
   <div class="jumbotron">
-    <video id="video-background" muted autoplay loop poster="/src/assets/bg.png">
+    <video id="video-background" muted autoplay loop poster="/src/assets/bg.jpg">
       <source src="/src/assets/video.mp4" type="video/mp4">
       <source src="/src/assets/video.webm" type="video/webm">
     </video>
@@ -59,7 +59,7 @@
       <avatar></avatar>
     </div>
   </div>
-</div>
+</section>
 </template>
 
 <script>
