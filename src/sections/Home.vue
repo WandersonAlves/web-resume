@@ -21,35 +21,6 @@
   color: white;
 }
 
-@-webkit-keyframes scroll {
-  100% {
-    background-position: 0px -3000px;
-  }
-}
-
-@-moz-keyframes scroll {
-  100% {
-    background-position: 0px -3000px;
-  }
-}
-
-@-o-keyframes scroll {
-  100% {
-    background-position: 0px -3000px;
-  }
-}
-
-@-ms-keyframes scroll {
-  100% {
-    background-position: 0px -3000px;
-  }
-}
-
-@keyframes scroll {
-  100% {
-    background-position: 0px -3000px;
-  }
-}
 #video-background {
   position: fixed;
   top: 0;
@@ -103,7 +74,7 @@ export default {
     }
   },
   computed: {
-    currentFlag: function() {
+    currentFlag () {
       if (this.$i18n.locale() === 'pt') {
         return '/src/assets/ptBR.png'
       } else if (this.$i18n.locale() === 'en') {
@@ -112,13 +83,17 @@ export default {
     }
   },
   methods: {
-    changeLocale: function() {
+    changeLocale () {
       if (this.$i18n.locale() === 'pt') {
         this.$i18n.set('en');
       } else if (this.$i18n.locale() === 'en') {
         this.$i18n.set('pt');
       }
     }
+  },
+  mounted () {
+    let video = document.querySelector('#video-background');
+    video.play();
   }
 }
 </script>
