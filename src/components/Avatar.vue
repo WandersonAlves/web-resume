@@ -38,6 +38,7 @@
 .jumbotron p {
   font-size: 20px;
   letter-spacing: 0.01em;
+  font-family: 'Quicksand', sans-serif !important; 
 }
 
 @media (max-width: 1024px) {
