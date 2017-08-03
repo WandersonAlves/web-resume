@@ -16,20 +16,30 @@
 .margin {
   margin-top: 7%;
 }
+
 .white {
   color: white;
 }
+
 .center-content {
   margin-top: 25vh;
 }
+
 .icon-size {
   font-size: 2.7em;
   padding-left: 5px;
   padding-right: 5px;
 }
+
 .icon-fix {
   font-size: 2.5em;
 }
+
+.jumbotron p {
+  font-size: 20px;
+  letter-spacing: 0.01em;
+}
+
 @media (max-width: 1024px) {
   .responsive-text {
     text-align: center;
@@ -39,6 +49,7 @@
     margin-top: 10vh;
   }
 }
+
 @media (max-width: 768px) {
   .avatar {
     width: 200px;
