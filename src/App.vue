@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" v-cloak>
     <home></home>
   </div>
 </template>
@@ -17,5 +17,8 @@ export default {
 <style>
 body {
   font-family: 'Lato', sans-serif !important;
+}
+[v-cloak] {
+    display:none;
 }
 </style>
