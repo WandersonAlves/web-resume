@@ -1,6 +1,5 @@
 var path = require('path')
 var webpack = require('webpack')
-var GoogleFontsPlugin = require("google-fonts-webpack-plugin")
 
 module.exports = {
   entry: './src/main.js',
@@ -104,11 +103,6 @@ if (process.env.NODE_ENV === 'production') {
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
-    }),
-    new GoogleFontsPlugin({
-			fonts: [
-				{ family: "Open Sans" , variants: ["300", "400"]}
-			]
-		})
+    })
   ])
 }

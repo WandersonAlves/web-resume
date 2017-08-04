@@ -16,6 +16,6 @@ export default {
 
 <style>
 body {
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: 'Lato', sans-serif !important;
 }
 </style>

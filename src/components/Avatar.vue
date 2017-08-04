@@ -1,8 +1,18 @@
 <style scoped>
 .avatar {
-  border-radius: 50%;
   width: 250px;
   height: 250px;
+  background: linear-gradient(180deg, #5d5fc8, #f79f34, #7c7d98, #e95df0 );
+  background-size: 800% 800%;
+  border-radius: 50%;
+  padding: 8px;
+  animation: Gradient 25s ease infinite;
+}
+
+@keyframes Gradient {
+    0%{background-position:0% 4%}
+    50%{background-position:100% 97%}
+    100%{background-position:0% 4%}
 }
 
 .line-height {
@@ -16,20 +26,31 @@
 .margin {
   margin-top: 7%;
 }
+
 .white {
   color: white;
 }
+
 .center-content {
   margin-top: 25vh;
 }
+
 .icon-size {
   font-size: 2.7em;
   padding-left: 5px;
   padding-right: 5px;
 }
+
 .icon-fix {
   font-size: 2.5em;
 }
+
+.jumbotron p {
+  font-size: 20px;
+  letter-spacing: 0.01em;
+  font-family: 'Quicksand', sans-serif !important;
+}
+
 @media (max-width: 1024px) {
   .responsive-text {
     text-align: center;
@@ -39,6 +60,7 @@
     margin-top: 10vh;
   }
 }
+
 @media (max-width: 768px) {
   .avatar {
     width: 200px;
