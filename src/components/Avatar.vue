@@ -1,8 +1,18 @@
 <style scoped>
 .avatar {
-  border-radius: 50%;
   width: 250px;
   height: 250px;
+  background: linear-gradient(180deg, #5d5fc8, #f79f34, #7c7d98, #e95df0 );
+  background-size: 800% 800%;
+  border-radius: 50%;
+  padding: 8px;
+  animation: Gradient 25s ease infinite;
+}
+
+@keyframes Gradient {
+    0%{background-position:0% 4%}
+    50%{background-position:100% 97%}
+    100%{background-position:0% 4%}
 }
 
 .line-height {
@@ -38,7 +48,7 @@
 .jumbotron p {
   font-size: 20px;
   letter-spacing: 0.01em;
-  font-family: 'Quicksand', sans-serif !important; 
+  font-family: 'Quicksand', sans-serif !important;
 }
 
 @media (max-width: 1024px) {
