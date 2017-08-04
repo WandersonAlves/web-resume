@@ -56,7 +56,7 @@
       <source src="/src/assets/video.webm" type="video/webm">
     </video>
     <div class="container">
-      <avatar></avatar>
+      <avatar v-once></avatar>
     </div>
   </div>
 </section>
