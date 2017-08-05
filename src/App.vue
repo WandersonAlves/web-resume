@@ -9,7 +9,8 @@
         </div>
       </div>
     </nav>
-    <transition>
+    <transition :enter-active-class="enterActiveClass"
+                leave-active-class="animated slideOutDown">
       <router-view></router-view>
     </transition>
   </div>
@@ -22,6 +23,11 @@ export default {
   name: 'app',
   components: {
     Home
+  },
+  data() {
+    return {
+      enterActiveClass: ""
+    }
   },
   computed: {
     currentFlag () {
@@ -41,6 +47,11 @@ export default {
       }
     }
   },
+  created() {
+    this.$bus.$on('change-animation', ($event) => {
+      this.enterActiveClass = "animated slideInUp";
+    });    
+  }
 }
 </script>
 

@@ -34,18 +34,27 @@
       <avatar v-once></avatar>
     </div>
   </div>
+  <arrow @click.native="nextPage()"></arrow>
 </section>
 </template>
 
 <script>
 import Avatar from '../components/Avatar.vue';
+import Arrow from '../components/Arrow.vue';
+
 export default {
   name: 'Home',
   components: {
-    Avatar
+    Avatar,
+    Arrow
   },
   data() {
     return {
+    }
+  },
+  methods: {
+    nextPage() {
+      this.$router.push({name: 'about'});
     }
   }
 }
