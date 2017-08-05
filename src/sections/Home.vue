@@ -47,10 +47,6 @@ export default {
   data() {
     return {
     }
-  },
-  mounted () {
-    let video = document.querySelector('#video-background');
-    video.play();
   }
 }
 </script>
