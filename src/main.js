@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex';
 import vuexI18n from 'vuex-i18n';
 import App from './App.vue'
+import router from './router';
 
 import bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
 import enUSTranslate from './i18n/enUS.js';
@@ -29,5 +30,6 @@ else {
 
 new Vue({
   el: '#app',
-  render: h => h(App)
+  render: h => h(App),
+  router
 })

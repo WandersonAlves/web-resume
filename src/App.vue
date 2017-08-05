@@ -1,6 +1,17 @@
 <template>
   <div id="app" v-cloak>
-    <home></home>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <img alt="Brand" @click="changeLocale()" :src="currentFlag">
+          </a>
+        </div>
+      </div>
+    </nav>
+    <transition>
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
@@ -11,7 +22,25 @@ export default {
   name: 'app',
   components: {
     Home
-  }
+  },
+  computed: {
+    currentFlag () {
+      if (this.$i18n.locale() === 'pt') {
+        return '/src/assets/ptBR.png'
+      } else if (this.$i18n.locale() === 'en') {
+        return '/src/assets/enUS.png'
+      }
+    }
+  },
+  methods: {
+    changeLocale () {
+      if (this.$i18n.locale() === 'pt') {
+        this.$i18n.set('en');
+      } else if (this.$i18n.locale() === 'en') {
+        this.$i18n.set('pt');
+      }
+    }
+  },
 }
 </script>
 
@@ -21,5 +50,15 @@ body {
 }
 [v-cloak] {
     display:none;
+}
+.navbar-default {
+  border-color: transparent;
+  background-color: rgba(0, 0, 0, 0.34);
+  -webkit-box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.25);
+}
+.navbar-brand {
+  height: none;
 }
 </style>
