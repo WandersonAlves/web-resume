@@ -1,18 +1,26 @@
-# web-resume
+# Web Resume
 
-> A web resume presentation site
+> This is the repo for my personal resume on interwebs.
 
-## Build Setup
+Feel free to see how i builded my site.
 
-``` bash
-# install dependencies
-npm install
+### Techonolgies used
 
-# serve with hot reload at localhost:8080
-npm run dev
+- VueJS 2.3.x
+- Webpack 2.x
+- Heroku (deploy)
+- Adobe Photoshop (for design)
 
-# build for production with minification
-npm run build
-```
+# Links
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+- [Prototype on MarvelApp](https://marvelapp.com/2e4hhje)
+- [Master Branch on Heroku](wandersonalves.herokuapp.com)
+- [Development Branch on Heroku](wandersonalves-test.herokuapp.com) (when complete, this link will be removed)
+
+# TO-DO
+- [X] Presentation View
+- [ ] About View
+- [ ] Skills View
+- [ ] Contact View
+- [ ] Unit Tests?
+- [ ] E2E Tests?
