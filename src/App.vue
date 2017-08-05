@@ -10,7 +10,7 @@
       </div>
     </nav>
     <transition :enter-active-class="enterActiveClass"
-                leave-active-class="animated slideOutDown">
+                leave-active-class="animated slideOutUp">
       <router-view></router-view>
     </transition>
   </div>
@@ -49,8 +49,8 @@ export default {
   },
   created() {
     this.$bus.$on('change-animation', ($event) => {
-      this.enterActiveClass = "animated slideInUp";
-    });    
+      this.enterActiveClass = "animated slideInDown";
+    });
   }
 }
 </script>
