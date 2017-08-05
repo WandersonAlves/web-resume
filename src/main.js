@@ -1,12 +1,18 @@
 import Vue from 'vue'
 import Vuex from 'vuex';
 import vuexI18n from 'vuex-i18n';
-import App from './App.vue'
+import VueAnalytics from 'vue-analytics';
+import App from './App.vue';
 import router from './router';
 
 import bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
 import enUSTranslate from './i18n/enUS.js';
 import ptBRTranslate from './i18n/ptBR.js';
+
+Vue.use(VueAnalytics, {
+  id: 'UA-104092834-1',
+  router
+});
 
 Vue.use(Vuex);
 
