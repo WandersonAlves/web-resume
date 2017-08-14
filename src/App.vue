@@ -3,9 +3,9 @@
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">
+          <div class="navbar-brand">
             <img alt="Brand" @click="changeLocale()" :src="currentFlag">
-          </a>
+          </div>
         </div>
       </div>
     </nav>
