@@ -19,16 +19,8 @@
   line-height: 11px !important;
 }
 
-.boldier {
-  font-weight: 400;
-}
-
 .margin {
   margin-top: 7%;
-}
-
-.white {
-  color: white;
 }
 
 .center-content {

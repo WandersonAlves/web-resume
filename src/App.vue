@@ -6,10 +6,11 @@
           <div class="navbar-brand">
             <img alt="Brand" @click="changeLocale()" :src="currentFlag">
           </div>
+          <p class="navbar-text lato lightier white font-size-12 text-center">{{currRoute}}</p>
         </div>
       </div>
     </nav>
-    <transition class="animated" transition-mode="in-out" enter-to-class="animated fadeIn">
+    <transition class="animated" transition-mode="out-in" enter-to-class="animated fadeIn">
       <router-view></router-view>
     </transition>
   </div>
@@ -25,7 +26,8 @@ export default {
   },
   data() {
     return {
-      enterActiveClass: ""
+      enterActiveClass: "",
+      currRoute: ""
     }
   },
   computed: {
@@ -47,18 +49,14 @@ export default {
     }
   },
   created() {
-    // this.$bus.$on('change-animation', (animation) => {
-    //   console.log(animation);
-    //   this.enterActiveClass = animation;
-    // });
-  }
+    this.$bus.$on('route-text', (text) => {
+      this.currRoute = text;
+    });
+  },
 }
 </script>
 
 <style>
-body {
-  font-family: 'Lato', sans-serif !important;
-}
 [v-cloak] {
     display:none;
 }
