@@ -6,10 +6,10 @@
 </style>
 <template>
   <section>
-    <div class="container bg-yellow container-padding-top">
+    <div class="container bg-orange container-padding-top">
       <h1>Under Construction</h1>
     </div>
-    <arrow></arrow>
+    <arrow @click.native="nextPage()"></arrow>
   </section>
 </template>
 <script>
@@ -21,10 +21,15 @@
     },
     mounted() {
       //this.$bus.$emit('change-animation');
-      this.$bus.$emit('route-text', 'SKILLS');
+      this.$bus.$emit('route-text', 'SKILLS', true);
     },
     beforeDestroy() {
-      this.$bus.$emit('route-text', '');
+      this.$bus.$emit('route-text', '', false);
+    },
+    methods: {
+      nextPage() {
+        this.$router.push({ name: 'contact' });
+      }
     }
   }
 </script>

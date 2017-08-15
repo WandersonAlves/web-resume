@@ -21,10 +21,10 @@
     },
     mounted() {
       //this.$bus.$emit('change-animation');
-      this.$bus.$emit('route-text', 'ABOUT');
+      this.$bus.$emit('route-text', 'ABOUT', true);
     },
     beforeDestroy() {
-      this.$bus.$emit('route-text', '');
+      this.$bus.$emit('route-text', '', false);
     },
     methods: {
        nextPage() {

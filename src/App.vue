@@ -1,12 +1,12 @@
 <template>
   <div id="app" v-cloak>
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top" v-bind:class="{'bg-alpha-black': alphaBlack}">
       <div class="container-fluid">
         <div class="navbar-header">
           <div class="navbar-brand">
             <img alt="Brand" @click="changeLocale()" :src="currentFlag">
           </div>
-          <p class="navbar-text lato lightier white font-size-12 text-center">{{currRoute}}</p>
+          <p class="navbar-text lato lightier black font-size-12 text-center">{{currRoute}}</p>
         </div>
       </div>
     </nav>
@@ -27,7 +27,8 @@ export default {
   data() {
     return {
       enterActiveClass: "",
-      currRoute: ""
+      currRoute: "",
+      alphaBlack: false
     }
   },
   computed: {
@@ -49,8 +50,9 @@ export default {
     }
   },
   created() {
-    this.$bus.$on('route-text', (text) => {
+    this.$bus.$on('route-text', (text, color) => {
       this.currRoute = text;
+      this.alphaBlack = color;
     });
   },
 }
