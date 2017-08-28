@@ -4,11 +4,15 @@
   margin-right: 10px
 
 h4
-  font-size: 1.7em
+  font-size: 1.5em
 
 h4::first-letter 
   color: red
   font-size: 1.8em
+
+@media(max-width: 959px)
+  h4
+    font-size: 1.3em
 
 </style>
 <template>
