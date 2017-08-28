@@ -21,7 +21,7 @@ h4::first-letter
       <div class="flex flex-dir-row flex-content-center">
         <div class="flex-dir-col flex-align-self-center separator">
           <img src="/src/assets/skills.png">
-          <p class="text-center open-sans font-weight-500 font-size-12">The "Javascripty" sexy experience</p>
+          <p class="margin-top-20 text-center open-sans font-weight-500 font-size-12">The "Javascripty" sexy experience</p>
         </div>
         <span class="flex-separator"></span>
         <div class="flex-dir-col separator">
