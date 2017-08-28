@@ -16,7 +16,7 @@
 }
 
 .line-height {
-  line-height: 11px !important;
+  line-height: 11px;
 }
 
 .margin {
@@ -43,10 +43,14 @@
   font-family: 'Quicksand', sans-serif !important;
 }
 
+.separator {
+  margin: 0px 10px 0px 10px;
+}
+
 @media (max-width: 1024px) {
   .responsive-text {
     text-align: center;
-    line-height: 25px;
+    line-height: 22px;
   }
   .center-content {
     margin-top: 10vh;
@@ -65,11 +69,12 @@
 </style>
 
 <template>
-<div class="row center-content">
-  <div class="col-md-3">
+<div class="height flex flex-dir-row flex-align-items-center flex-content-center">
+  <div class="flex-dir-row">
     <img src="/src/assets/avatar.jpg" class="avatar center-block" alt="Wanderson Alves"/>
   </div>
-  <div class="col-md-6 col-xs-12 line-height margin responsive-text">
+  <span class="separator"></span>
+  <div class="flex-dir-col line-height responsive-text">
     <p class="boldier white">{{ 'homeFirstP' | translate }}</p>
     <p class="boldier white">{{ 'homeSecondP' | translate }}</p>
     <p class="boldier white">{{ 'homeThirdP' | translate }}</p>
