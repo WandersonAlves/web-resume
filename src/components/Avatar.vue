@@ -2,8 +2,8 @@
 .avatar {
   width: 250px;
   height: 250px;
-  background: linear-gradient(180deg, #5d5fc8, #f79f34, #7c7d98, #e95df0 );
-  background-size: 800% 800%;
+  background: linear-gradient(270deg, #f4376d, #66349d);
+  background-size: 400% 400%;
   border-radius: 50%;
   padding: 8px;
   animation: Gradient 25s ease infinite;

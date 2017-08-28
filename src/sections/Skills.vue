@@ -1,7 +1,4 @@
 <style scoped lang="sass">
-.container
-  width: 100vw
-  height: 100vh
 
 </style>
 <template>

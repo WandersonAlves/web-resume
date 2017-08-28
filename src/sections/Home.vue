@@ -5,7 +5,7 @@
   margin-bottom: 0px;
 }
 
-#video-background {
+#gradient-background {
   position: fixed;
   top: 0;
   right: 0;
@@ -14,22 +14,23 @@
   overflow: hidden;
   z-index: -1;
   width:100%;
+  background: linear-gradient(270deg, #f4376d, #66349d);
+  background-size: 400% 400%;
+
+  animation: AnimationName 30s ease infinite;
 }
-@media (max-width: 1023px) {
-  #video-background {
-    width: auto;
-    height: 100vh;
-  }
+@keyframes AnimationName { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 </style>
 
 <template>
 <section>
   <div class="jumbotron">
-    <video id="video-background" muted autoplay loop poster="/src/assets/bg.jpg">
-      <source src="/src/assets/video.mp4" type="video/mp4">
-      <source src="/src/assets/video.webm" type="video/webm">
-    </video>
+    <div id="gradient-background">
+    </div>
     <div class="container">
       <avatar v-once></avatar>
     </div>
