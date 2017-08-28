@@ -18,8 +18,8 @@ h4::first-letter
 <template>
   <section>
     <div class="container container-padding-top container-padding">
-      <div class="flex flex-dir-row flex-content-center">
-        <div class="flex-dir-col flex-align-self-center separator">
+      <div class="flex flex-dir-row flex-content-center flex-align-items-center">
+        <div class="flex-dir-col separator">
           <img src="/src/assets/skills.png">
           <p class="margin-top-20 text-center open-sans font-weight-500 font-size-12">The "Javascripty" sexy experience</p>
         </div>

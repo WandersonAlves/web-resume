@@ -67,7 +67,7 @@
 <template>
 <div class="row center-content">
   <div class="col-md-3">
-    <img src="/src/assets/avatar.jpg" class="avatar center-block" />
+    <img src="/src/assets/avatar.jpg" class="avatar center-block" alt="Wanderson Alves"/>
   </div>
   <div class="col-md-6 col-xs-12 line-height margin responsive-text">
     <p class="boldier white">{{ 'homeFirstP' | translate }}</p>
