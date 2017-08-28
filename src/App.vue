@@ -6,7 +6,7 @@
           <div class="navbar-brand">
             <img alt="Brand" @click="changeLocale()" :src="currentFlag">
           </div>
-          <p class="navbar-text lato lightier black font-size-12 text-center">{{currRoute}}</p>
+          <p class="navbar-text lato lightier black font-size-12">{{currRoute}}</p>
         </div>
       </div>
     </nav>
