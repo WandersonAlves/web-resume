@@ -74,7 +74,9 @@
 <template>
 <div class="height flex flex-dir-row flex-align-items-center flex-content-center">
   <div class="flex-dir-row">
-    <img src="/src/assets/avatar.jpg" class="avatar center-block" alt="Wanderson Alves"/>
+    <transition class="animated" transition-mode="out-in" enter-to-class="animated fadeIn">
+      <img src="/src/assets/avatar.jpg" class="avatar center-block" alt="Wanderson Alves"/>
+    </transition>
   </div>
   <span class="separator"></span>
   <div class="flex-dir-col line-height responsive-text">

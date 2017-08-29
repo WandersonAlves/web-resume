@@ -28,16 +28,14 @@ h4::first-letter
         <span class="flex-separator"></span>
         <div class="flex-dir-col separator">
           <h4 class="boldier text-justify open-sans">
-            Graduated in Computer Science at UNICAP (Universidade Catolica de Pernambuco).<br/><br/>
-            Professional and personal experience in web development (Client and Server side in Javascript).<br/>
-            Professional experience with corporative systems development.<br/>
-            Experience in prototyping middle and high fidelity websites.<br/>
-            Experience in DevOps pipelines (automation, unit/e2e tests, code coverage, Jenkins, open source CI/CD tools).<br/>
-
-            Wide experience in front-end development focused on Angular 1.x/Angular 4/VueJS and high knowledge in JavaScript development, becoming reference in projects that i work. <br/><br/>
-
-            Also, i had worked with Adobe Flex and ETL tools in the past in Accenture.<br/>
-            Passion and love for UI/UX Design!!!
+            {{ 'about1H4' | translate}}<br/></br/>
+            {{ 'about2H4' | translate}}<br/>
+            {{ 'about3H4' | translate}}<br/>
+            {{ 'about4H4' | translate}}<br/>
+            {{ 'about5H4' | translate}}<br/><br/>
+            {{ 'about6H4' | translate}}<br/><br/>
+            {{ 'about7H4' | translate}}<br/>
+            {{ 'about8H4' | translate}}
           </h4>
         </div>
       </div>
