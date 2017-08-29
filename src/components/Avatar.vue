@@ -37,7 +37,7 @@
   font-size: 2.5em;
 }
 
-.jumbotron p {
+.container p {
   font-size: 20px;
   letter-spacing: 0.01em;
   font-family: 'Quicksand', sans-serif !important;

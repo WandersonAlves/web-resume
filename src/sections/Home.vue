@@ -1,10 +1,4 @@
 <style scoped>
-.jumbotron {
-  height: 100vh;
-  background: transparent;
-  margin-bottom: 0px;
-}
-
 #gradient-background {
   position: fixed;
   top: 0;
@@ -28,13 +22,11 @@
 
 <template>
 <section>
-  <div class="jumbotron">
     <div id="gradient-background">
     </div>
     <div class="container">
       <avatar v-once></avatar>
     </div>
-  </div>
   <arrow @click.native="nextPage()"></arrow>
 </section>
 </template>

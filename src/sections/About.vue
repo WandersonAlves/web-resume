@@ -4,7 +4,9 @@
   margin-right: 10px
 
 h4
-  font-size: 1.5em
+  font-size: 1.4em
+  letter-spacing: 0.03em
+  line-height: 1.2em
 
 h4::first-letter 
   color: red
@@ -26,10 +28,16 @@ h4::first-letter
         <span class="flex-separator"></span>
         <div class="flex-dir-col separator">
           <h4 class="boldier text-justify open-sans">
-            Bacon ipsum dolor amet pork chop pig filet mignon, kielbasa pork loin prosciutto pancetta doner ground round tail. Pancetta venison cupim ribeye shoulder meatball t-bone pork belly. Landjaeger boudin shoulder, bacon pork chop jowl ribeye chuck tri-tip corned beef tongue. Leberkas spare ribs t-bone andouille, filet mignon tri-tip pork chop shank sausage swine short loin. Ham swine picanha kielbasa tail pork loin doner, drumstick landjaeger kevin capicola strip steak turducken burgdoggen corned beef. Ham hock kevin meatloaf pork ribeye tongue. Salami meatball drumstick swine bacon shank, venison sirloin ham hock meatloaf ribeye jowl brisket.
-          </h4>
-          <h4 class="boldier text-justify open-sans">
-            Picanha pork belly turkey, doner leberkas flank spare ribs biltong. Kielbasa spare ribs tri-tip strip steak meatloaf. Tongue jowl strip steak salami porchetta rump. Tongue ribeye turducken t-bone, kevin strip steak flank brisket doner pork loin shank tail. Capicola bacon prosciutto, corned beef ground round burgdoggen tail short ribs shank pork loin t-bone sirloin. Flank prosciutto ribeye, ham hock picanha chicken boudin pork burgdoggen jowl pork loin alcatra brisket ham venison.
+            Graduated in Computer Science at UNICAP (Universidade Catolica de Pernambuco).<br/><br/>
+            Professional and personal experience in web development (Client and Server side in Javascript).<br/>
+            Professional experience with corporative systems development.<br/>
+            Experience in prototyping middle and high fidelity websites.<br/>
+            Experience in DevOps pipelines (automation, unit/e2e tests, code coverage, Jenkins, open source CI/CD tools).<br/>
+
+            Wide experience in front-end development focused on Angular 1.x/Angular 4/VueJS and high knowledge in JavaScript development, becoming reference in projects that i work. <br/><br/>
+
+            Also, i had worked with Adobe Flex and ETL tools in the past in Accenture.<br/>
+            Passion and love for UI/UX Design!!!
           </h4>
         </div>
       </div>
