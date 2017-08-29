@@ -24,7 +24,7 @@
 <section>
     <div id="gradient-background">
     </div>
-    <div class="container">
+    <div class="container container-viewport">
       <avatar v-once></avatar>
     </div>
   <arrow @click.native="nextPage()"></arrow>
