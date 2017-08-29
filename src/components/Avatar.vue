@@ -55,6 +55,9 @@
   .center-content {
     margin-top: 10vh;
   }
+  .separator {
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 768px) {
