@@ -65,9 +65,7 @@ export default {
 .navbar-default {
   border-color: transparent;
   background-color: rgba(0, 0, 0, 0.34);
-  -webkit-box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
 }
 .navbar-brand {
   height: none;
