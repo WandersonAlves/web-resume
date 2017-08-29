@@ -1,6 +1,6 @@
 <template>
   <div id="app" v-cloak>
-    <nav class="navbar navbar-default navbar-fixed-top" v-bind:class="{'bg-alpha-black': alphaBlack}">
+    <nav class="navbar navbar-default navbar-fixed-top" v-bind:class="fromRouteCss">
       <div class="container-fluid">
         <div class="navbar-header">
           <div class="navbar-brand">
@@ -28,7 +28,7 @@ export default {
     return {
       enterActiveClass: "",
       currRoute: "",
-      alphaBlack: false
+      fromRouteCss: "",
     }
   },
   computed: {
@@ -52,7 +52,7 @@ export default {
   created() {
     this.$bus.$on('route-text', (text, color) => {
       this.currRoute = text;
-      this.alphaBlack = color;
+      this.fromRouteCss = color;
     });
   },
 }
