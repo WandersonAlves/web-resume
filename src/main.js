@@ -1,11 +1,20 @@
 import Vue from 'vue'
 import Vuex from 'vuex';
 import vuexI18n from 'vuex-i18n';
-import App from './App.vue'
+import VueAnalytics from 'vue-analytics';
+import App from './App.vue';
+import router from './router';
 
 import bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
 import enUSTranslate from './i18n/enUS.js';
 import ptBRTranslate from './i18n/ptBR.js';
+
+import 'styles/_index.sass';
+
+Vue.use(VueAnalytics, {
+  id: 'UA-104092834-1',
+  router
+});
 
 Vue.use(Vuex);
 
@@ -27,7 +36,18 @@ else {
   Vue.i18n.set('en');
 }
 
+const EventBus = new Vue();
+
+Object.defineProperties(Vue.prototype, {
+  $bus: {
+    get: function () {
+      return EventBus
+    }
+  }
+});
+
 new Vue({
   el: '#app',
-  render: h => h(App)
+  render: h => h(App),
+  router
 })

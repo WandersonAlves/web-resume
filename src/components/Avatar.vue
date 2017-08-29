@@ -2,8 +2,8 @@
 .avatar {
   width: 250px;
   height: 250px;
-  background: linear-gradient(180deg, #5d5fc8, #f79f34, #7c7d98, #e95df0 );
-  background-size: 800% 800%;
+  background: linear-gradient(270deg, #f4376d, #66349d);
+  background-size: 400% 400%;
   border-radius: 50%;
   padding: 8px;
   animation: Gradient 25s ease infinite;
@@ -16,19 +16,11 @@
 }
 
 .line-height {
-  line-height: 11px !important;
-}
-
-.boldier {
-  font-weight: 400;
+  line-height: 11px;
 }
 
 .margin {
   margin-top: 7%;
-}
-
-.white {
-  color: white;
 }
 
 .center-content {
@@ -45,19 +37,26 @@
   font-size: 2.5em;
 }
 
-.jumbotron p {
+.container p {
   font-size: 20px;
   letter-spacing: 0.01em;
   font-family: 'Quicksand', sans-serif !important;
 }
 
+.separator {
+  margin: 0px 10px 0px 10px;
+}
+
 @media (max-width: 1024px) {
   .responsive-text {
     text-align: center;
-    line-height: 25px;
+    line-height: 22px;
   }
   .center-content {
     margin-top: 10vh;
+  }
+  .separator {
+    margin-top: 10px;
   }
 }
 
@@ -73,17 +72,20 @@
 </style>
 
 <template>
-<div class="row center-content">
-  <div class="col-md-3">
-    <img src="/src/assets/avatar.jpg" class="avatar center-block" />
+<div class="height flex flex-dir-row flex-align-items-center flex-content-center">
+  <div class="flex-dir-row">
+    <transition class="animated" transition-mode="out-in" enter-to-class="animated fadeIn">
+      <img src="/src/assets/avatar.jpg" class="avatar center-block" alt="Wanderson Alves"/>
+    </transition>
   </div>
-  <div class="col-md-6 col-xs-12 line-height margin responsive-text">
+  <span class="separator"></span>
+  <div class="flex-dir-col line-height responsive-text">
     <p class="boldier white">{{ 'homeFirstP' | translate }}</p>
     <p class="boldier white">{{ 'homeSecondP' | translate }}</p>
     <p class="boldier white">{{ 'homeThirdP' | translate }}</p>
-    <a href="https://www.linkedin.com/in/wanderson-alves-575279a1/" target='_blank'><i class="fa fa-linkedin-square white icon-size" aria-hidden="true"></i></a>
-    <a href="https://github.com/WandersonAlves" target='_blank'><i class="fa fa-github white icon-size" aria-hidden="true"></i></a>
-    <a href="https://twitter.com/Popoto_" target='_blank'><i class="fa fa-twitter white icon-size" aria-hidden="true"></i></a>
+    <a href="https://www.linkedin.com/in/wanderson-alves-575279a1/" target='noopener'><i class="fa fa-linkedin-square white icon-size" aria-hidden="true"></i></a>
+    <a href="https://github.com/WandersonAlves" target='noopener'><i class="fa fa-github white icon-size" aria-hidden="true"></i></a>
+    <a href="https://twitter.com/Popoto_" target='noopener'><i class="fa fa-twitter white icon-size" aria-hidden="true"></i></a>
     <a href="mailto:wandersonalvesferreira2012@gmail.com"><i class="fa fa-envelope white icon-fix icon-size" aria-hidden="true"></i></a>
   </div>
 </div>
