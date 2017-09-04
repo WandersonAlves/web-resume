@@ -27,7 +27,7 @@
     <div class="container container-viewport">
       <avatar v-once></avatar>
     </div>
-  <arrow @click.native="nextPage()"></arrow>
+  <arrow @click.native="nextPage()" bounce direction="down" color="white"></arrow>
 </section>
 </template>
 

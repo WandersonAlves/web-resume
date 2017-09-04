@@ -16,30 +16,37 @@ h4::first-letter
   h4
     font-size: 1.3em
 
+  .separator
+    margin-bottom: 30px
+
 </style>
 <template>
   <section>
-    <div class="container container-padding-top container-padding">
-      <div class="flex flex-dir-row flex-content-center flex-align-items-center">
-        <div class="flex-dir-col separator">
-          <img src="/src/assets/skills.png">
-          <p class="margin-top-20 text-center open-sans font-weight-500 font-size-12">The "Javascripty" sexy experience</p>
-        </div>
-        <span class="flex-separator"></span>
-        <div class="flex-dir-col separator">
-          <h4 class="boldier text-justify open-sans">
-            {{ 'about1H4' | translate}}<br/></br/>
-            {{ 'about2H4' | translate}}<br/>
-            {{ 'about3H4' | translate}}<br/>
-            {{ 'about4H4' | translate}}<br/>
-            {{ 'about5H4' | translate}}<br/><br/>
-            {{ 'about6H4' | translate}}<br/><br/>
-            {{ 'about7H4' | translate}}<br/>
-            {{ 'about8H4' | translate}}
-          </h4>
+    <div class="container">
+      <arrow direction="up" color="black"></arrow>
+      <div class=" container-padding-top container-padding">
+        <div class="flex flex-dir-row flex-content-center flex-align-items-center">
+          <div class="flex-dir-col separator">
+            <img src="/src/assets/skills.png">
+            <p class="margin-top-20 text-center open-sans font-weight-500 font-size-12">The "Javascripty" sexy experience</p>
+          </div>
+          <span class="flex-separator"></span>
+          <div class="flex-dir-col separator">
+            <h4 class="boldier text-justify">
+              {{ 'about1H4' | translate}}<br/></br/>
+              {{ 'about2H4' | translate}}<br/>
+              {{ 'about3H4' | translate}}<br/>
+              {{ 'about4H4' | translate}}<br/>
+              {{ 'about5H4' | translate}}<br/><br/>
+              {{ 'about6H4' | translate}}<br/><br/>
+              {{ 'about7H4' | translate}}<br/>
+              {{ 'about8H4' | translate}}
+            </h4>
+          </div>
         </div>
       </div>
     </div>
+    <arrow direction="down" color="black"></arrow>
   </section>
 </template>
 <script>
