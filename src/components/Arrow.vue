@@ -31,10 +31,17 @@
   animation: bounce 2s infinite;
 }
 
+.padding-top {
+  padding-top: 75px;
+}
+
+.padding-bottom {
+  padding-bottom: 25px
+}
 
 </style>
 <template>
-  <div class="down" v-bind:class="{'bounce': bounce}">
+  <div class="down" v-bind:class="{'bounce': bounce, 'padding-top': direction === 'up', 'padding-bottom': paddingBottomHack}">
     <img class="arrow" v-bind:src="arrowComposition"/>
   </div>
 </template>
@@ -58,6 +65,12 @@
     computed: {
       arrowComposition() {
         return `/src/assets/${this.direction}-${this.color}.svg`
+      },
+      paddingBottomHack() {
+        if (this.direction === 'down' && this.$route.name == 'presentation') {
+          return false;
+        }
+        return true;
       }
     }
   }
