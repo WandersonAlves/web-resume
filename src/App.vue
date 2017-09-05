@@ -1,28 +1,25 @@
 <template>
-  <div id="app" v-cloak>
-    <nav class="navbar navbar-default navbar-fixed-top" v-bind:class="fromRouteCss">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <div class="navbar-brand">
-            <img alt="Brand" @click="changeLocale()" :src="currentFlag">
-          </div>
-          <p class="navbar-text lato boldier black font-size-12">{{currRoute | translate | uppercase}}</p>
-        </div>
-      </div>
-    </nav>
-    <transition class="animated" transition-mode="out-in" enter-to-class="animated fadeIn">
-      <router-view></router-view>
-    </transition>
+  <div id="app" v-cloak>   
+    <home></home>
+    <about></about>
+    <skills></skills>
+    <contact></contact>
   </div>
 </template>
 
 <script>
 import Home from './sections/Home.vue';
+import About from './sections/About.vue';
+import Skills from './sections/Skills.vue';
+import Contact from './sections/Contact.vue';
 
 export default {
   name: 'app',
   components: {
-    Home
+    Home,
+    About,
+    Skills,
+    Contact
   },
   data() {
     return {

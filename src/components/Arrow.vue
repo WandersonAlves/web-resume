@@ -24,7 +24,7 @@
   width: 20px;
   height: 20px;
   cursor: pointer;
-  left: 50%
+  left: 50%;
 }
 
 .bounce {
@@ -36,12 +36,12 @@
 }
 
 .padding-bottom {
-  padding-bottom: 25px
+  padding-bottom: 85px
 }
 
 </style>
 <template>
-  <div class="down" v-bind:class="{'bounce': bounce, 'padding-top': direction === 'up', 'padding-bottom': paddingBottomHack}">
+  <div class="down" v-bind:class="{'bounce': bounce, 'padding-top': direction === 'up'}">
     <img class="arrow" v-bind:src="arrowComposition"/>
   </div>
 </template>
@@ -65,12 +65,6 @@
     computed: {
       arrowComposition() {
         return `/src/assets/${this.direction}-${this.color}.svg`
-      },
-      paddingBottomHack() {
-        if (this.direction === 'down' && this.$route.name == 'presentation') {
-          return false;
-        }
-        return true;
       }
     }
   }
