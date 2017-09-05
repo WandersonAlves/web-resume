@@ -22,17 +22,17 @@ h4::first-letter
 </style>
 <template>
   <section>
-    <div class="container">
+    <div class="container bg-white">
       <arrow @click.native="previousPage()" direction="up" color="black"></arrow>
       <div class=" container-padding-top container-padding">
         <div class="flex flex-dir-row flex-content-center flex-align-items-center">
           <div class="flex-dir-col separator">
             <img src="/src/assets/skills.png">
-            <p class="margin-top-20 text-center open-sans font-weight-500 font-size-12">{{'aboutJavascript' | translate}}</p>
+            <p class="black margin-top-20 text-center open-sans font-weight-500 font-size-12">{{'aboutJavascript' | translate}}</p>
           </div>
           <span class="flex-separator"></span>
           <div class="flex-dir-col separator">
-            <h4 class="boldier text-justify">
+            <h4 class="black boldier text-justify">
               {{ 'about1H4' | translate}}<br/></br/>
               {{ 'about2H4' | translate}}<br/>
               {{ 'about3H4' | translate}}<br/>
@@ -45,8 +45,9 @@ h4::first-letter
           </div>
         </div>
       </div>
+      <arrow @click.native="nextPage()" direction="down" color="black"></arrow>
     </div>
-    <arrow @click.native="nextPage()" direction="down" color="black"></arrow>
+    
   </section>
 </template>
 <script>
@@ -60,7 +61,6 @@ h4::first-letter
       Arrow
     },
     mounted() {
-      //this.$bus.$emit('change-animation');
       this.$bus.$emit('route-text', 'aboutHeader', 'bg-white');
     },
     beforeDestroy() {
