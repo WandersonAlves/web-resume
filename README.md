@@ -19,7 +19,7 @@ Feel free to see how i builded my site.
 
 # TO-DO
 - [X] Presentation View
-- [ ] About View
+- [X] About View
 - [ ] Skills View
 - [ ] Contact View
 - [ ] Unit Tests?
