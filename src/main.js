@@ -42,7 +42,11 @@ Object.defineProperties(Vue.prototype, {
   }
 });
 
+Vue.filter('uppercase', (value) => {
+  return value.toString().toUpperCase();
+});
+
 new Vue({
   el: '#app',
-  render: h => h(App)
-})
+  render: h => h(App),
+});
