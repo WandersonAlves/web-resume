@@ -23,7 +23,7 @@ h4::first-letter
 <template>
   <section>
     <div class="container">
-      <arrow direction="up" color="black"></arrow>
+      <arrow @click.native="previousPage()" direction="up" color="black"></arrow>
       <div class=" container-padding-top container-padding">
         <div class="flex flex-dir-row flex-content-center flex-align-items-center">
           <div class="flex-dir-col separator">
@@ -46,13 +46,16 @@ h4::first-letter
         </div>
       </div>
     </div>
-    <arrow direction="down" color="black"></arrow>
+    <arrow @click.native="nextPage()" direction="down" color="black"></arrow>
   </section>
 </template>
 <script>
   import Arrow from '../components/Arrow.vue';
+  import Mixin from '../mixins/RouterNavigation.mixin';
+
   export default {
     name: 'About',
+    mixins: [Mixin],
     components: {
       Arrow
     },
@@ -62,11 +65,6 @@ h4::first-letter
     },
     beforeDestroy() {
       this.$bus.$emit('route-text', '', false);
-    },
-    methods: {
-       nextPage() {
-        this.$router.push({ name: 'skills' });
-      }
     }
   }
 </script>

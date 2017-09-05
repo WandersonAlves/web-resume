@@ -34,20 +34,17 @@
 <script>
 import Avatar from '../components/Avatar.vue';
 import Arrow from '../components/Arrow.vue';
+import Mixin from '../mixins/RouterNavigation.mixin';
 
 export default {
   name: 'Home',
+  mixins: [Mixin],
   components: {
     Avatar,
     Arrow
   },
   data() {
     return {
-    }
-  },
-  methods: {
-    nextPage() {
-      this.$router.push({name: 'about'});
     }
   }
 }
