@@ -1,7 +1,7 @@
 <style scoped lang="sass">
 .separator
-  margin-left: 10px
-  margin-right: 10px
+  margin-left: 200px
+  margin-right: 200px
 
 h4
   font-size: 1.4em
@@ -18,14 +18,15 @@ h4::first-letter
 
   .separator
     margin-bottom: 30px
+    margin-left: 20px
+    margin-right: 20px
 
 </style>
 <template>
   <section>
     <div class="container bg-white">
-      <arrow @click.native="previousPage()" direction="up" color="black"></arrow>
-      <div class=" container-padding-top container-padding">
-        <div class="flex flex-dir-row flex-content-center flex-align-items-center">
+      <div class="container-padding">
+        <div class="flex flex-dir-col flex-content-center flex-align-items-center">
           <div class="flex-dir-col separator">
             <img src="/src/assets/skills.png">
             <p class="black margin-top-20 text-center open-sans font-weight-500 font-size-12">{{'aboutJavascript' | translate}}</p>
@@ -45,7 +46,6 @@ h4::first-letter
           </div>
         </div>
       </div>
-      <arrow @click.native="nextPage()" direction="down" color="black"></arrow>
     </div>
     
   </section>
@@ -61,7 +61,7 @@ h4::first-letter
       Arrow
     },
     mounted() {
-      this.$bus.$emit('route-text', 'aboutHeader', 'bg-white');
+      // this.$bus.$emit('route-text', 'aboutHeader', 'bg-white');
     },
     beforeDestroy() {
       this.$bus.$emit('route-text', '', false);

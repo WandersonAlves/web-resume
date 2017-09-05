@@ -18,7 +18,7 @@
     },
     mounted() {
       //this.$bus.$emit('change-animation');
-      this.$bus.$emit('route-text', 'skillsHeader', 'bg-orange');
+      // this.$bus.$emit('route-text', 'skillsHeader', 'bg-orange');
     },
     beforeDestroy() {
       this.$bus.$emit('route-text', '', false);
