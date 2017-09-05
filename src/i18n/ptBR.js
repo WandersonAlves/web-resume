@@ -2,6 +2,7 @@ export default {
   aboutHeader: 'Sobre',
   skillsHeader: 'Habilidades',
   contactHeader: 'Contato',
+  aboutJavascript: 'JavaScript sem ser vulgar',
   homeFirstP: "Olá, Wanderson Alves aqui!",
   homeSecondP: "Eu sou Front-End Developer & UI Designer.",
   homeThirdP: "Atualmente vivendo no Brasil.",
