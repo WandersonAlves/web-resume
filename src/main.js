@@ -11,24 +11,22 @@ import ptBRTranslate from './i18n/ptBR.js';
 
 import 'styles/_index.sass';
 
+Vue.use(Vuex);
 Vue.use(VueAnalytics, {
   id: 'UA-104092834-1',
   router
 });
-
-Vue.use(Vuex);
-
-const store = new Vuex.Store();
-const enUS = enUSTranslate;
-const ptBR = ptBRTranslate;
-
-Vue.use(vuexI18n.plugin, store);
 Vue.use(bootstrap);
 
+const enUS = enUSTranslate;
+const ptBR = ptBRTranslate;
+const currentLocale = navigator.language;
+const store = new Vuex.Store();
+
+Vue.use(vuexI18n.plugin, store);
 Vue.i18n.add('en', enUS);
 Vue.i18n.add('pt', ptBR);
 
-const currentLocale = navigator.language;
 if (currentLocale === 'pt-BR') {
   Vue.i18n.set('pt');
 }
