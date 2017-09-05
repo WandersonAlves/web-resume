@@ -18,15 +18,10 @@
     },
     mounted() {
       //this.$bus.$emit('change-animation');
-      this.$bus.$emit('route-text', 'SKILLS', 'bg-orange');
+      this.$bus.$emit('route-text', 'skillsHeader', 'bg-orange');
     },
     beforeDestroy() {
       this.$bus.$emit('route-text', '', false);
-    },
-    methods: {
-      nextPage() {
-        this.$router.push({ name: 'contact' });
-      }
     }
   }
 </script>

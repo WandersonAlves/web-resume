@@ -61,7 +61,7 @@ h4::first-letter
     },
     mounted() {
       //this.$bus.$emit('change-animation');
-      this.$bus.$emit('route-text', 'ABOUT', 'bg-white');
+      this.$bus.$emit('route-text', 'aboutHeader', 'bg-white');
     },
     beforeDestroy() {
       this.$bus.$emit('route-text', '', false);

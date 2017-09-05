@@ -51,7 +51,7 @@ export default {
     },
     mounted() {
         //this.$bus.$emit('change-animation');
-        this.$bus.$emit('route-text', 'CONTACT', 'bg-blue');
+        this.$bus.$emit('route-text', 'contactHeader', 'bg-blue');
     },
     beforeDestroy() {
         this.$bus.$emit('route-text', '', false);

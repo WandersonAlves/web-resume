@@ -1,4 +1,7 @@
 export default {
+  aboutHeader: 'About',
+  skillsHeader: 'Skills',
+  contactHeader: 'Contact',
   homeFirstP: "Hi, Wanderson Alves over here!",
   homeSecondP: "I’m a Front-End Developer & UI Designer.",
   homeThirdP: "Currently living in Recife, Brazil.",
