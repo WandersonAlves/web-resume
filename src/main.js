@@ -3,7 +3,6 @@ import Vuex from 'vuex';
 import vuexI18n from 'vuex-i18n';
 import VueAnalytics from 'vue-analytics';
 import App from './App.vue';
-import router from './router';
 
 import bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
 import enUSTranslate from './i18n/enUS.js';
@@ -13,8 +12,7 @@ import 'styles/_index.sass';
 
 Vue.use(Vuex);
 Vue.use(VueAnalytics, {
-  id: 'UA-104092834-1',
-  router
+  id: 'UA-104092834-1'
 });
 Vue.use(bootstrap);
 
@@ -46,6 +44,5 @@ Object.defineProperties(Vue.prototype, {
 
 new Vue({
   el: '#app',
-  render: h => h(App),
-  router
+  render: h => h(App)
 })

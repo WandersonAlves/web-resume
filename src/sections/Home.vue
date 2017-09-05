@@ -1,13 +1,5 @@
 <style scoped>
-#gradient-background {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  z-index: -1;
-  width:100%;
+.gradient-background {
   background: linear-gradient(270deg, #f4376d, #66349d);
   background-size: 400% 400%;
 
@@ -18,16 +10,21 @@
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
+
+.arrow {
+  position: relative;
+  bottom: 48px;
+}
 </style>
 
 <template>
 <section>
-    <div id="gradient-background">
-    </div>
-    <div class="container container-viewport">
-      <avatar v-once></avatar>
-    </div>
-  <arrow @click.native="nextPage()" bounce direction="down" color="white"></arrow>
+    <div class="gradient-background container container-viewport">
+      <avatar v-once></avatar>      
+      <div class="arrow">
+        <arrow bounce direction="down" color="white"></arrow>
+      </div> 
+    </div>     
 </section>
 </template>
 
