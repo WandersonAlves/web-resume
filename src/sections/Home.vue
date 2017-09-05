@@ -27,27 +27,24 @@
     <div class="container container-viewport">
       <avatar v-once></avatar>
     </div>
-  <arrow @click.native="nextPage()"></arrow>
+  <arrow @click.native="nextPage()" bounce direction="down" color="white"></arrow>
 </section>
 </template>
 
 <script>
 import Avatar from '../components/Avatar.vue';
 import Arrow from '../components/Arrow.vue';
+import Mixin from '../mixins/RouterNavigation.mixin';
 
 export default {
   name: 'Home',
+  mixins: [Mixin],
   components: {
     Avatar,
     Arrow
   },
   data() {
     return {
-    }
-  },
-  methods: {
-    nextPage() {
-      this.$router.push({name: 'about'});
     }
   }
 }

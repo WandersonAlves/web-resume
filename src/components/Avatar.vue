@@ -40,7 +40,6 @@
 .container p {
   font-size: 20px;
   letter-spacing: 0.01em;
-  font-family: 'Quicksand', sans-serif !important;
 }
 
 .separator {
@@ -80,9 +79,9 @@
   </div>
   <span class="separator"></span>
   <div class="flex-dir-col line-height responsive-text">
-    <p class="boldier white">{{ 'homeFirstP' | translate }}</p>
-    <p class="boldier white">{{ 'homeSecondP' | translate }}</p>
-    <p class="boldier white">{{ 'homeThirdP' | translate }}</p>
+    <p class="boldier quicksand white">{{ 'homeFirstP' | translate }}</p>
+    <p class="boldier quicksand white">{{ 'homeSecondP' | translate }}</p>
+    <p class="boldier quicksand white">{{ 'homeThirdP' | translate }}</p>
     <a href="https://www.linkedin.com/in/wanderson-alves-575279a1/" target='noopener'><i class="fa fa-linkedin-square white icon-size" aria-hidden="true"></i></a>
     <a href="https://github.com/WandersonAlves" target='noopener'><i class="fa fa-github white icon-size" aria-hidden="true"></i></a>
     <a href="https://twitter.com/Popoto_" target='noopener'><i class="fa fa-twitter white icon-size" aria-hidden="true"></i></a>

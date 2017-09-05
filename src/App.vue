@@ -6,7 +6,7 @@
           <div class="navbar-brand">
             <img alt="Brand" @click="changeLocale()" :src="currentFlag">
           </div>
-          <p class="navbar-text lato boldier black font-size-12">{{currRoute}}</p>
+          <p class="navbar-text lato boldier black font-size-12">{{currRoute | translate | uppercase}}</p>
         </div>
       </div>
     </nav>
@@ -55,6 +55,11 @@ export default {
       this.fromRouteCss = color;
     });
   },
+  filters: {
+    uppercase(value) {
+      return value.toString().toUpperCase();
+    }
+  }
 }
 </script>
 
@@ -65,9 +70,7 @@ export default {
 .navbar-default {
   border-color: transparent;
   background-color: rgba(0, 0, 0, 0.34);
-  -webkit-box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.25);
-  box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
 }
 .navbar-brand {
   height: none;
