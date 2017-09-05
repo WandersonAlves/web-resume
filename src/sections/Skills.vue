@@ -6,7 +6,6 @@
     <div class="container bg-orange container-padding-top">
       <h1>Under Construction</h1>
     </div>
-    <arrow @click.native="nextPage()"></arrow>
   </section>
 </template>
 <script>
