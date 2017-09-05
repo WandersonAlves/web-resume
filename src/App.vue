@@ -51,11 +51,6 @@ export default {
       this.currRoute = text;
       this.fromRouteCss = color;
     });
-  },
-  filters: {
-    uppercase(value) {
-      return value.toString().toUpperCase();
-    }
   }
 }
 </script>

@@ -9,7 +9,7 @@ h4
   line-height: 1.2em
 
 h4::first-letter 
-  color: red
+  color: #D33575
   font-size: 1.8em
 
 @media(max-width: 959px)
@@ -24,16 +24,19 @@ h4::first-letter
 </style>
 <template>
   <section>
-    <div class="container bg-white">
+    <div class="container bg-white container-padding-top">
       <div class="container-padding">
         <div class="flex flex-dir-col flex-content-center flex-align-items-center">
+          <div>
+            <h1 class="montserrat heading-margin pink">- {{'aboutHeader' | translate | uppercase}} -</h1>
+          </div>
           <div class="flex-dir-col separator">
             <img src="/src/assets/skills.png">
             <p class="black margin-top-20 text-center open-sans font-weight-500 font-size-12">{{'aboutJavascript' | translate}}</p>
           </div>
           <span class="flex-separator"></span>
           <div class="flex-dir-col separator">
-            <h4 class="black boldier text-justify">
+            <h4 class="black text-justify">
               {{ 'about1H4' | translate}}<br/></br/>
               {{ 'about2H4' | translate}}<br/>
               {{ 'about3H4' | translate}}<br/>
