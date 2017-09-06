@@ -8,6 +8,11 @@
   margin-left: 30px
   margin-right: 30px
 
+.ball
+  margin-top: 180px
+  width: 92px
+  height: 92px
+
 h4
   font-size: 1.4em
   letter-spacing: 0.03em
@@ -64,6 +69,9 @@ h4::first-letter
               {{'about7H4' | translate}} <br/>
               {{'about8H4' | translate}} 
             </h4>
+          </div>
+          <div>
+            <img class="ball" src="/src/assets/heart.svg"/>
           </div>
         </div>
       </div>
