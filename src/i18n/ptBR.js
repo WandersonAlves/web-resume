@@ -13,6 +13,6 @@ export default {
   about4H4: "visual",
   about5H4: "e",
   about6H4: "interativo.",
-  about7H4: 'Fico sempre estar por dentro das novas tecnologias, seja usando elas ou apenas "sabendo" que elas existem. Já me deparei em várias situações onde esse meu conhecimento me levou adiante.',
+  about7H4: 'Procuro sempre estar por dentro das novas tecnologias, seja usando elas ou apenas "sabendo" que elas existem. Já me deparei em várias situações onde esse meu conhecimento me levou adiante.',
   about8H4: "Por onde passo, tento deixar um toque pessoal meu. Seja de forma visual ou em forma de código. As pessoas que trabalharam comigo reconhecem quando algo foi feito por mim.",
 };
