@@ -15,7 +15,7 @@
             <svg width="120" height="120" viewBox="0 0 120 120">
                 <circle cx="60" cy="60" r="54" fill="none" stroke="#e6e6e6" stroke-width="12" />
                 <text class="boldier" x="42" y="65" fill="#D33575" font-size="20px" font-family="Montserrat">{{shownPercentage}}%</text>
-                <circle cx="60" cy="60" r="54" fill="none" stroke="#D33575" stroke-width="12" stroke-linecap="round" stroke-dasharray="339.292" :stroke-dashoffset="strokeDashoffset" />
+                <circle cx="60" cy="60" r="54" fill="none" stroke="#D33575" stroke-width="12" stroke-linecap="round" transform="rotate(-90 60 60)" stroke-dasharray="339.292" :stroke-dashoffset="strokeDashoffset" />
             </svg>
         </div>
         <h3 class="margin-top-10 text-center font-weight-400 pink margin-reset montserrat">{{skill}}</h3>
