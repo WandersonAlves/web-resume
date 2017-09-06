@@ -73,6 +73,11 @@ h4::first-letter
           <div>
             <img class="ball" src="/src/assets/heart.svg"/>
           </div>
+          <div class="margin-top-20 flex flex-dir-row">
+            <circle-progress :percentage="0.75" skill="HTML 5" description="Sites pessoais, corporativos, etc.."></circle-progress>
+            <circle-progress :percentage="0.67" skill="CSS3" description="Clip-path, borders, customizações"></circle-progress>
+            <circle-progress :percentage="0.95" skill="VueJS" description="Vuex, vue-router, mixins"></circle-progress>
+          </div>
         </div>
       </div>
     </div>    
@@ -80,7 +85,12 @@ h4::first-letter
 </template>
 <script>
 
+  import CircleProgress from '../components/CircleProgress.vue';
+
   export default {
     name: 'About',
+    components: {
+      CircleProgress
+    }
   }
 </script>
