@@ -71,20 +71,8 @@ h4::first-letter
   </section>
 </template>
 <script>
-  import Arrow from '../components/Arrow.vue';
-  import Mixin from '../mixins/RouterNavigation.mixin';
 
   export default {
     name: 'About',
-    mixins: [Mixin],
-    components: {
-      Arrow
-    },
-    mounted() {
-      // this.$bus.$emit('route-text', 'aboutHeader', 'bg-white');
-    },
-    beforeDestroy() {
-      this.$bus.$emit('route-text', '', false);
-    }
   }
 </script>
