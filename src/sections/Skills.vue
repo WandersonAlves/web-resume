@@ -3,24 +3,19 @@
 </style>
 <template>
   <section>
-    <div class="container bg-orange container-padding-top">
-      <h1>Under Construction</h1>
+    <div class="container bg-orange container-padding-top container-padding-bottom">
+      <div class="container-padding">
+        <div class="flex flex-dir-col flex-content-center flex-align-items-center">
+          <div>
+            <h1 class="montserrat heading-margin orange heading-bg">- {{'skillsHeader' | translate | uppercase}} -</h1>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 <script>
-  import Arrow from '../components/Arrow.vue';
   export default {
-    name: 'Skills',
-    components: {
-      Arrow
-    },
-    mounted() {
-      //this.$bus.$emit('change-animation');
-      // this.$bus.$emit('route-text', 'skillsHeader', 'bg-orange');
-    },
-    beforeDestroy() {
-      this.$bus.$emit('route-text', '', false);
-    }
+    name: 'Skills'
   }
 </script>
