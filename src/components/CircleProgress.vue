@@ -109,10 +109,16 @@ export default {
     },
     computed: {
         strokeDashoffset() {
+            if (this.percentage > 100) {
+                this.percentage = 100;
+            }
+            else if (this.percentage < 0) {
+                this.percentage = 0;
+            }
             return 339.292 * (1 - (this.percentage / 100));
         },
         xAxis() {
-            if (this.percentage === 100) {
+            if (this.percentage >= 100) {
                 return 36;
             }
             else if (this.percentage >=0 && this.percentage <=9) {

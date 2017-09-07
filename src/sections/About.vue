@@ -71,7 +71,7 @@ h4::first-letter
             </h4>
           </div>
           <div>
-            <img class="ball" src="/src/assets/heart.svg"/>
+            <img class="ball" src="/src/assets/pc.svg"/>
           </div>
         </div>
       </div>
