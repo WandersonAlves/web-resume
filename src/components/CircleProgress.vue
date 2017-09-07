@@ -33,6 +33,10 @@
     align-items: center;
 }
 
+.flex-row-inverse {
+    flex-flow: row-reverse
+}
+
 .text-center {
     text-align: center;
 }
@@ -52,28 +56,29 @@
     .text-right, .text-left {
         text-align: center;
     }
+    .padding-left, .padding-right {
+        padding: 0px;
+    }
 }
 
 
 </style>
 <template>    
-    <div class="flex padding flex-itens-center" v-bind:class="{'flex-dir-col': direction === 'mid', 'flex-dir-row': direction === 'left' || 'right'}">        
-        <div class="text-right padding-right" v-if="direction === 'right'">
-            <h3 class="margin-top-10 font-weight-400 pink margin-reset montserrat">{{skill}}</h3>
-            <div class="psize">
-                <p class="black font-weight-300 open-sans">{{description}}</p>
-            </div>
-        </div>
+    <div class="flex padding flex-itens-center" 
+        :class="{'flex-dir-col': direction === 'mid', 'flex-dir-row': direction === 'left' || 'right', 'flex-row-inverse' : direction === 'right'}">
         <div>            
             <svg width="120" height="120" viewBox="0 0 120 120">
                 <circle cx="60" cy="60" r="54" fill="none" stroke="#e6e6e6" stroke-width="12" />
-                <text class="boldier" x="42" y="65" fill="#D33575" font-size="20px" font-family="Montserrat">{{shownPercentage}}%</text>
+                <text class="boldier" :x="xAxis" y="67" :fill="color" font-size="20px" font-family="Montserrat">{{percentage}}%</text>
                 <circle cx="60" cy="60" r="54" fill="none" :stroke="color" stroke-width="12" stroke-linecap="round" transform="rotate(-90 60 60)" stroke-dasharray="339.292" :stroke-dashoffset="strokeDashoffset" />
             </svg>
-        </div>
-        <div v-bind:class="{'text-center': direction === 'mid', 'text-left padding-left': direction === 'left'}" v-if="direction !== 'right'">
-            <h3 class="margin-top-10 font-weight-400 margin-reset montserrat" :style="{ color: color }">{{skill}}</h3>
-            <div class="psize">
+        </div>        
+        <div>
+            <h3 class="margin-top-10 font-weight-400 margin-reset montserrat" 
+                :class="{'text-center': direction === 'mid', 'text-left padding-left': direction === 'left', 'text-right padding-right': direction === 'right'}" 
+                :style="{ color: color }">{{skill}}</h3>
+            <div class="psize" 
+                 :class="{'text-center': direction === 'mid', 'text-left padding-left': direction === 'left', 'text-right padding-right': direction === 'right'}">
                 <p class="black font-weight-300 open-sans">{{description}}</p>
             </div>
         </div>
@@ -85,7 +90,7 @@ export default {
     props: {
         percentage: {
             type: Number,
-            default: 1
+            default: 100
         },
         skill: {
             type: String
@@ -104,10 +109,18 @@ export default {
     },
     computed: {
         strokeDashoffset() {
-            return 339.292 * (1 - this.percentage);
+            return 339.292 * (1 - (this.percentage / 100));
         },
-        shownPercentage() {
-            return this.percentage * 100;
+        xAxis() {
+            if (this.percentage === 100) {
+                return 36;
+            }
+            else if (this.percentage >=0 && this.percentage <=9) {
+                return 47;
+            }
+            else {
+                return 42;
+            }
         }
     }
 }
