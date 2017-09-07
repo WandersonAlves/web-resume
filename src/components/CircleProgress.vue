@@ -8,19 +8,64 @@
     padding: 20px
 }
 
+.padding-left {
+    padding-left: 20px
+}
+
+.padding-right {
+    padding-right: 20px
+}
+
+.flex {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.flex-dir-row {
+    flex-direction: row;
+}
+
+.flex-dir-col {
+    flex-direction: column;
+}
+
+
+.flex-itens-center {
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+
 </style>
 <template>    
-    <div class="flex flex-dir-col padding">        
-        <div class="flex-align-self-center">            
+    <div class="flex padding flex-itens-center" v-bind:class="{'flex-dir-col': direction === 'mid', 'flex-dir-row': direction === 'left' || 'right'}">        
+        <div class="text-right padding-right" v-if="direction === 'right'">
+            <h3 class="margin-top-10 font-weight-400 pink margin-reset montserrat">{{skill}}</h3>
+            <div class="psize">
+                <p class="black font-weight-300 open-sans">{{description}}</p>
+            </div>
+        </div>
+        <div>            
             <svg width="120" height="120" viewBox="0 0 120 120">
                 <circle cx="60" cy="60" r="54" fill="none" stroke="#e6e6e6" stroke-width="12" />
                 <text class="boldier" x="42" y="65" fill="#D33575" font-size="20px" font-family="Montserrat">{{shownPercentage}}%</text>
                 <circle cx="60" cy="60" r="54" fill="none" stroke="#D33575" stroke-width="12" stroke-linecap="round" transform="rotate(-90 60 60)" stroke-dasharray="339.292" :stroke-dashoffset="strokeDashoffset" />
             </svg>
         </div>
-        <h3 class="margin-top-10 text-center font-weight-400 pink margin-reset montserrat">{{skill}}</h3>
-        <div class="psize">
-            <p class="black text-center font-weight-300 open-sans">{{description}}</p>
+        <div v-bind:class="{'text-center': direction === 'mid', 'text-left padding-left': direction === 'left'}" v-if="direction !== 'right'">
+            <h3 class="margin-top-10 font-weight-400 pink margin-reset montserrat">{{skill}}</h3>
+            <div class="psize">
+                <p class="black font-weight-300 open-sans">{{description}}</p>
+            </div>
         </div>
     </div>
 </template>
@@ -37,6 +82,10 @@ export default {
         },
         description: {
             type: String
+        },
+        direction: {
+            type: String,
+            default: 'mid'
         }
     },
     computed: {
