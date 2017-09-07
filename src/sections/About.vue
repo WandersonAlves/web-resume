@@ -73,17 +73,6 @@ h4::first-letter
           <div>
             <img class="ball" src="/src/assets/heart.svg"/>
           </div>
-          <div class="margin-top-20 flex flex-dir-row flex-flow-wrap-row">
-            <circle-progress class="flex-33" direction="left" color="#ff9c00" :percentage="75" skill="HTML 5" description="Sites pessoais, corporativos, etc.."></circle-progress>
-            <circle-progress class="flex-33" direction="left" color="#5d5fc8" :percentage="63" skill="CSS3" description="Clip-path, borders, customizações"></circle-progress>
-            <circle-progress class="flex-33" direction="left" color="#41B883" :percentage="95" skill="VueJS" description="Vuex, vue-router, mixins"></circle-progress>
-            <circle-progress class="flex-33" direction="right" color="#F7DF1E" :percentage="100" skill="JavaScript" description="Closures, functional programming"></circle-progress>
-            <circle-progress class="flex-33" direction="right" color="red" :percentage="50" skill="Angular 4" description="Meh"></circle-progress>
-            <circle-progress class="flex-33" direction="right" color="grey" :percentage="89" skill="Git" description="Rebase, cherry-pick"></circle-progress>
-            <circle-progress class="flex-33" direction="mid" color="blue" :percentage="0" skill="Webpack"></circle-progress>
-            <circle-progress class="flex-33" direction="mid" color="orange" :percentage="80" skill="Jenkins" description="Pipelines, Groovy Files"></circle-progress>
-            <circle-progress class="flex-33" direction="mid" color="green" :percentage="55" skill="NodeJS" description="JavaScript?"></circle-progress>
-          </div>
         </div>
       </div>
     </div>    
@@ -91,12 +80,7 @@ h4::first-letter
 </template>
 <script>
 
-  import CircleProgress from '../components/CircleProgress.vue';
-
   export default {
     name: 'About',
-    components: {
-      CircleProgress
-    }
   }
 </script>
