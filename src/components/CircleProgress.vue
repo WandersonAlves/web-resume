@@ -29,7 +29,6 @@
     flex-direction: column;
 }
 
-
 .flex-itens-center {
     align-items: center;
 }
@@ -45,6 +44,17 @@
     text-align: right;
 }
 
+
+@media(max-width: 959px) {
+    .flex-dir-row {
+        flex-direction: column;
+    }
+    .text-right, .text-left {
+        text-align: center;
+    }
+}
+
+
 </style>
 <template>    
     <div class="flex padding flex-itens-center" v-bind:class="{'flex-dir-col': direction === 'mid', 'flex-dir-row': direction === 'left' || 'right'}">        
@@ -58,11 +68,11 @@
             <svg width="120" height="120" viewBox="0 0 120 120">
                 <circle cx="60" cy="60" r="54" fill="none" stroke="#e6e6e6" stroke-width="12" />
                 <text class="boldier" x="42" y="65" fill="#D33575" font-size="20px" font-family="Montserrat">{{shownPercentage}}%</text>
-                <circle cx="60" cy="60" r="54" fill="none" stroke="#D33575" stroke-width="12" stroke-linecap="round" transform="rotate(-90 60 60)" stroke-dasharray="339.292" :stroke-dashoffset="strokeDashoffset" />
+                <circle cx="60" cy="60" r="54" fill="none" :stroke="color" stroke-width="12" stroke-linecap="round" transform="rotate(-90 60 60)" stroke-dasharray="339.292" :stroke-dashoffset="strokeDashoffset" />
             </svg>
         </div>
         <div v-bind:class="{'text-center': direction === 'mid', 'text-left padding-left': direction === 'left'}" v-if="direction !== 'right'">
-            <h3 class="margin-top-10 font-weight-400 pink margin-reset montserrat">{{skill}}</h3>
+            <h3 class="margin-top-10 font-weight-400 margin-reset montserrat" :style="{ color: color }">{{skill}}</h3>
             <div class="psize">
                 <p class="black font-weight-300 open-sans">{{description}}</p>
             </div>
@@ -86,6 +96,10 @@ export default {
         direction: {
             type: String,
             default: 'mid'
+        },
+        color: {
+            type: String,
+            default: "#D33573"
         }
     },
     computed: {
