@@ -79,7 +79,7 @@
                 :style="{ color: color }">{{skill}}</h3>
             <div class="psize" 
                  :class="{'text-center': direction === 'mid', 'text-left padding-left': direction === 'left', 'text-right padding-right': direction === 'right'}">
-                <p class="black font-weight-300 open-sans">{{description}}</p>
+                <p class="black font-weight-300 quicksand">{{description}}</p>
             </div>
         </div>
     </div>
