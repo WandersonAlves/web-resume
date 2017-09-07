@@ -11,15 +11,16 @@
           </div>
           <div class="margin-top-20 flex flex-dir-row flex-flow-wrap-row">
             <circle-progress class="flex-33" direction="mid" color="#514444" :percentage="100" skill="JavaScript" description="Closures, functional programming, Object.assign({}, obj)"></circle-progress>
-            <circle-progress class="flex-33" direction="mid" color="#514444" :percentage="95" skill="VueJS" description="Vuex, vue-router, mixins"></circle-progress>
-            <circle-progress class="flex-33" direction="mid" color="#514444" :percentage="89" skill="Git" description="Rebase, cherry-pick"></circle-progress>
+            <circle-progress class="flex-33" direction="mid" color="#514444" :percentage="95" skill="VueJS" description="Vuex, vue-router, mixins..."></circle-progress>
+            <circle-progress class="flex-33" direction="mid" color="#514444" :percentage="89" skill="Git" description="Rebase, cherry-pick, merges..."></circle-progress>
             <circle-progress class="flex-33" direction="mid" color="#514444" :percentage="80" skill="Jenkins" description="Pipelines, Groovy Files"></circle-progress>
             <circle-progress class="flex-33" direction="mid" color="#514444" :percentage="75" skill="HTML 5" description="Sites pessoais, corporativos, etc.."></circle-progress>
             <circle-progress class="flex-33" direction="mid" color="#514444" :percentage="75" skill="Photoshop" description="Prototipos, tratamento e manipulação de imagens"></circle-progress>
             <circle-progress class="flex-33" direction="mid" color="#514444" :percentage="63" skill="CSS3" description="Clip-path, borders, customizações"></circle-progress>
-            <circle-progress class="flex-33" direction="mid" color="#514444" :percentage="55" skill="NodeJS" description="JavaScript?"></circle-progress>
+            <circle-progress class="flex-33" direction="mid" color="#514444" :percentage="55" skill="NodeJS" description='"É tudo JavaScript mesmo..."'></circle-progress>
             <circle-progress class="flex-33" direction="mid" color="#514444" :percentage="50" skill="Angular 4" description="TypeScript"></circle-progress>
             <circle-progress class="flex-33" direction="mid" color="#514444" :percentage="10" skill="React" description="Learning..."></circle-progress>
+            <circle-progress class="flex-33" direction="mid" color="#ff9c00" :percentage="100" skill="Beber" description="Cerveja, Vodka, Vinho..."></circle-progress>
           </div>
         </div>
       </div>
