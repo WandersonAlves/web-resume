@@ -10,7 +10,7 @@
             <h1 class="montserrat heading-margin light-pink heading-bg">- {{'skillsHeader' | translate | uppercase}} -</h1>
           </div>
           <div class="margin-top-20 flex flex-dir-row flex-flow-wrap-row">
-            <circle-progress class="flex-33" direction="mid" color="#514444" :percentage="100" skill="JavaScript" description="Closures, functional programming, Object.assign({}, obj)"></circle-progress>
+            <circle-progress class="flex-33" direction="mid" color="#514444" :percentage="95" skill="JavaScript" description="Closures, functional programming, Object.assign({}, obj)"></circle-progress>
             <circle-progress class="flex-33" direction="mid" color="#514444" :percentage="95" skill="VueJS" description="Vuex, vue-router, mixins..."></circle-progress>
             <circle-progress class="flex-33" direction="mid" color="#514444" :percentage="89" skill="Git" description="Rebase, cherry-pick, merges..."></circle-progress>
             <circle-progress class="flex-33" direction="mid" color="#514444" :percentage="80" skill="Jenkins" description="Pipelines, Groovy Files"></circle-progress>
