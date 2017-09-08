@@ -7,7 +7,7 @@
       <div class="container-padding">
         <div class="flex flex-dir-col flex-content-center flex-align-items-center">
           <div>
-            <h1 class="montserrat heading-margin light-pink heading-bg">- {{'skillsHeader' | translate | uppercase}} -</h1>
+            <h1 class="montserrat heading-margin light-pink heading-bg">{{'skillsHeader' | translate | uppercase}}</h1>
           </div>
           <div class="margin-top-20 flex flex-dir-row flex-flow-wrap-row">
             <circle-progress class="flex-33" direction="mid" color="#514444" :percentage="95" skill="JavaScript" :description="skillsJavascript"></circle-progress>

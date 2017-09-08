@@ -45,7 +45,7 @@ h4::first-letter
       <div class="container-padding">
         <div class="flex flex-dir-col flex-content-center flex-align-items-center">
           <div>
-            <h1 class="montserrat heading-margin white heading-bg">- {{'aboutHeader' | translate | uppercase}} -</h1>
+            <h1 class="montserrat heading-margin white heading-bg">{{'aboutHeader' | translate | uppercase}}</h1>
           </div>
           <div class="flex-dir-row flex">
             <div class="flex-dir-col">
