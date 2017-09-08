@@ -49,7 +49,7 @@ h4::first-letter
           </div>
           <div class="flex-dir-row flex">
             <div class="flex-dir-col">
-              <img src="/src/assets/skills.png">
+              <img class="fake-responsive-img" src="/src/assets/me.png">
               <!-- <p class="black margin-top-20 text-center open-sans font-weight-500 font-size-12">{{'aboutJavascript' | translate}}</p> -->
             </div>
             <span class="separator-2"></span>
