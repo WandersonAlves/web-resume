@@ -56,10 +56,10 @@ h4::first-letter
             <div class="flex-align-self-center sm-text-center">
               <h3 class="pink montserrat line-height-1">NOME COMPLETO</h3>
               <p class="black font-weight-300 open-sans font-size-11">Wanderson Alves Ferreira</p>
+              <h3 class="pink montserrat line-height-1 padding-top-20">APELIDO</h3>
+              <p class="black font-weight-300 open-sans font-size-11">Popoto</p>
               <h3 class="pink montserrat line-height-1 padding-top-20">E-MAIL</h3>
               <p class="black font-weight-300 open-sans font-size-11">wandersonalvesferreira2012@gmail.com</p>
-              <h3 class="pink montserrat line-height-1 padding-top-20">CELULAR</h3>
-              <p class="black font-weight-300 open-sans font-size-11">(81) 99828-7685</p>
             </div>
           </div>
           <div class="flex-dir-col separator">
