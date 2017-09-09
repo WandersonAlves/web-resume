@@ -3,7 +3,7 @@
     <home></home>
     <about></about>
     <skills></skills>
-    <contact></contact>
+    <portfolio></portfolio>
   </div>
 </template>
 
@@ -11,7 +11,7 @@
 import Home from './sections/Home.vue';
 import About from './sections/About.vue';
 import Skills from './sections/Skills.vue';
-import Contact from './sections/Contact.vue';
+import Portfolio from './sections/Portfolio.vue';
 
 export default {
   name: 'app',
@@ -19,7 +19,7 @@ export default {
     Home,
     About,
     Skills,
-    Contact
+    Portfolio
   },
   data() {
     return {
