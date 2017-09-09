@@ -3,11 +3,11 @@
 </style>
 <template>
     <section>
-        <div class="container bg-blue container-padding-top container-padding-bottom">
+        <div class="container bg-pink container-padding-top container-padding-bottom">
             <div class="container-padding">
                 <div class="flex flex-dir-col flex-content-center flex-align-items-center">
                     <div>
-                        <h1 class="montserrat heading-margin blue heading-bg">{{'contactHeader' | translate | uppercase}}</h1>
+                        <h1 class="montserrat heading-margin pink bg-white heading-bg">{{'portfolioHeader' | translate | uppercase}}</h1>
                     </div>
                 </div>
             </div>
@@ -17,6 +17,6 @@
 <script>
 
 export default {
-    name: 'Contact'
+    name: 'Portfolio'
 }
 </script>

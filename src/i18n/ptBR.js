@@ -1,7 +1,8 @@
 export default {
-  aboutHeader: 'Sobre',
+  aboutHeader: 'Sobre eu',
   skillsHeader: 'Habilidades',
   contactHeader: 'Contato',
+  portfolioHeader: 'Portfólio',
   hobbies: 'Jogos de ritmo, musica progressiva, Interestellar (melhor filme), etc...',
   aboutJavascript: 'JavaScript sem ser vulgar',
   homeFirstP: "Olá, Wanderson Alves aqui!",
