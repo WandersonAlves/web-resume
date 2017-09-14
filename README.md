@@ -20,7 +20,7 @@ Feel free to see how i builded my site.
 # TO-DO
 - [X] Presentation View
 - [X] About View
-- [ ] Skills View
+- [X] Skills View
 - [ ] Contact View
 - [ ] Unit Tests?
 - [ ] E2E Tests?
