@@ -65,7 +65,7 @@
 </style>
 <template>    
     <div class="flex padding flex-itens-center" 
-        :class="{'flex-dir-col': direction === 'mid', 'flex-dir-row': direction === 'left' || 'right', 'flex-row-inverse' : direction === 'right'}">
+        :class="{'flex-dir-col': computedDirection === 'mid', 'flex-dir-row': computedDirection === 'left' || 'right', 'flex-row-inverse' : computedDirection === 'right'}">
         <div>            
             <svg width="120" height="120" viewBox="0 0 120 120">
                 <circle cx="60" cy="60" r="54" fill="none" stroke="#e6e6e6" stroke-width="12" />
@@ -75,10 +75,10 @@
         </div>        
         <div>
             <h3 class="margin-top-10 font-weight-400 margin-reset montserrat" 
-                :class="{'text-center': direction === 'mid', 'text-left padding-left': direction === 'left', 'text-right padding-right': direction === 'right'}" 
+                :class="{'text-center': computedDirection === 'mid', 'text-left padding-left': computedDirection === 'left', 'text-right padding-right': computedDirection === 'right'}" 
                 :style="{ color: color }">{{skill}}</h3>
             <div class="psize" 
-                 :class="{'text-center': direction === 'mid', 'text-left padding-left': direction === 'left', 'text-right padding-right': direction === 'right'}">
+                 :class="{'text-center': computedDirection === 'mid', 'text-left padding-left': computedDirection === 'left', 'text-right padding-right': computedDirection === 'right'}">
                 <p class="black font-weight-300 quicksand">{{description}}</p>
             </div>
         </div>
@@ -87,25 +87,31 @@
 <script>
 export default {
     name: 'CircleProgress',
+    introduction: 'Just a Circle Progress component!',
     props: {
         percentage: {
             type: Number,
-            default: 100
+            default: 100,
+            note: 'Describe the percentage of the circle'
         },
         skill: {
-            type: String
+            type: String,
+            note: 'Main text of the circle'
         },
         description: {
-            type: String
+            type: String,
+            note: 'Secondary text of the circle'
         },
         direction: {
             type: String,
-            default: 'mid'
+            default: 'mid',
+            note: 'Describe the direction of text of the circle. Valid values are: mid (default) | left | right. If a invalida value was set, then, default value will be assigned'
         },
         color: {
             type: String,
-            default: "#D33573"
-        }
+            default: "#D33573",
+            note: 'A hex color of the circle, default is #D33573'
+        },
     },
     computed: {
         strokeDashoffset() {
@@ -126,6 +132,14 @@ export default {
             }
             else {
                 return 42;
+            }
+        },
+        computedDirection() {
+            if (this.direction !== 'mid' && this.direction !== 'right' && this.direction !== 'left') {
+                return 'mid';
+            } 
+            else {
+                return this.direction;
             }
         }
     }
