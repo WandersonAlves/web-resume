@@ -85,6 +85,16 @@
     </div>
 </template>
 <script>
+const DEFAULT_SIZE = 339.292;
+const DIRECTION_MID = 'mid';
+const DIRECTION_LEFT = 'left';
+const DIRECTION_RIGHT = 'right';
+const FULL_CIRCLE_PERCENTAGE = 100;
+const EMPTY_CIRCLE_PERCENTAGE = 0;
+const TREE_DIGITS_X_AXIS = 36;
+const ONE_DIGITS_X_AXIS = 47;
+const DEFAULT_DIGITS_X_AXIS = 42;
+
 export default {
     name: 'CircleProgress',
     introduction: 'Just a Circle Progress component!',
@@ -92,7 +102,7 @@ export default {
         percentage: {
             type: Number,
             default: 100,
-            note: 'Describe the percentage of the circle'
+            note: 'Describe the percentage of the circle. If decimal number was set, then, return a Math.round() of the value'
         },
         skill: {
             type: String,
@@ -115,32 +125,26 @@ export default {
     },
     computed: {
         strokeDashoffset() {
-            return 339.292 * (1 - (this.computedPercentage / 100));
+            return DEFAULT_SIZE * (1 - (this.computedPercentage / FULL_CIRCLE_PERCENTAGE));
         },
         xAxis() {
-            if (this.computedPercentage >= 100) {
-                return 36;
-            } else if (this.computedPercentage >=0 && this.computedPercentage <=9) {
-                return 47;
-            } else {
-                return 42;
-            }
+            if (this.computedPercentage >= FULL_CIRCLE_PERCENTAGE) { return TREE_DIGITS_X_AXIS; } 
+            if (this.computedPercentage >= EMPTY_CIRCLE_PERCENTAGE && this.computedPercentage <=9) { return ONE_DIGITS_X_AXIS; }
+            return DEFAULT_DIGITS_X_AXIS;
         },
         computedDirection() {
-            if (this.direction !== 'mid' && this.direction !== 'right' && this.direction !== 'left') {
-                return 'mid';
-            } else {
-                return this.direction;
+            if (this.direction !== DIRECTION_MID && 
+                this.direction !== DIRECTION_LEFT && 
+                this.direction !== DIRECTION_RIGHT) {
+                return DIRECTION_MID;
             }
+            return this.direction;            
         },
         computedPercentage() {
-            if (this.percentage > 100) {
-                return 100;
-            } else if (this.percentage < 0) {
-                return 0;
-            } else {
-                return this.percentage;
-            }
+            let clonePercentage = Math.round(this.percentage);
+            if (clonePercentage > FULL_CIRCLE_PERCENTAGE) { return FULL_CIRCLE_PERCENTAGE; } 
+            if (clonePercentage < EMPTY_CIRCLE_PERCENTAGE) { return EMPTY_CIRCLE_PERCENTAGE; }
+            return clonePercentage;            
         }
     },
 }
