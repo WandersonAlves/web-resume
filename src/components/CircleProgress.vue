@@ -69,7 +69,7 @@
         <div>            
             <svg width="120" height="120" viewBox="0 0 120 120">
                 <circle cx="60" cy="60" r="54" fill="none" stroke="#e6e6e6" stroke-width="12" />
-                <text class="boldier" :x="xAxis" y="67" :fill="color" font-size="20px" font-family="Montserrat">{{percentage}}%</text>
+                <text class="boldier" :x="xAxis" y="67" :fill="color" font-size="20px" font-family="Montserrat">{{computedPercentage}}%</text>
                 <circle cx="60" cy="60" r="54" fill="none" :stroke="color" stroke-width="12" stroke-linecap="round" transform="rotate(-90 60 60)" stroke-dasharray="339.292" :stroke-dashoffset="strokeDashoffset" />
             </svg>
         </div>        
@@ -115,33 +115,33 @@ export default {
     },
     computed: {
         strokeDashoffset() {
-            if (this.percentage > 100) {
-                this.percentage = 100;
-            }
-            else if (this.percentage < 0) {
-                this.percentage = 0;
-            }
-            return 339.292 * (1 - (this.percentage / 100));
+            return 339.292 * (1 - (this.computedPercentage / 100));
         },
         xAxis() {
-            if (this.percentage >= 100) {
+            if (this.computedPercentage >= 100) {
                 return 36;
-            }
-            else if (this.percentage >=0 && this.percentage <=9) {
+            } else if (this.computedPercentage >=0 && this.computedPercentage <=9) {
                 return 47;
-            }
-            else {
+            } else {
                 return 42;
             }
         },
         computedDirection() {
             if (this.direction !== 'mid' && this.direction !== 'right' && this.direction !== 'left') {
                 return 'mid';
-            } 
-            else {
+            } else {
                 return this.direction;
             }
+        },
+        computedPercentage() {
+            if (this.percentage > 100) {
+                return 100;
+            } else if (this.percentage < 0) {
+                return 0;
+            } else {
+                return this.percentage;
+            }
         }
-    }
+    },
 }
 </script>
