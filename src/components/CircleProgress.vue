@@ -65,69 +65,87 @@
 </style>
 <template>    
     <div class="flex padding flex-itens-center" 
-        :class="{'flex-dir-col': direction === 'mid', 'flex-dir-row': direction === 'left' || 'right', 'flex-row-inverse' : direction === 'right'}">
+        :class="{'flex-dir-col': computedDirection === 'mid', 'flex-dir-row': computedDirection === 'left' || 'right', 'flex-row-inverse' : computedDirection === 'right'}">
         <div>            
             <svg width="120" height="120" viewBox="0 0 120 120">
                 <circle cx="60" cy="60" r="54" fill="none" stroke="#e6e6e6" stroke-width="12" />
-                <text class="boldier" :x="xAxis" y="67" :fill="color" font-size="20px" font-family="Montserrat">{{percentage}}%</text>
+                <text class="boldier" :x="xAxis" y="67" :fill="color" font-size="20px" font-family="Montserrat">{{computedPercentage}}%</text>
                 <circle cx="60" cy="60" r="54" fill="none" :stroke="color" stroke-width="12" stroke-linecap="round" transform="rotate(-90 60 60)" stroke-dasharray="339.292" :stroke-dashoffset="strokeDashoffset" />
             </svg>
         </div>        
         <div>
             <h3 class="margin-top-10 font-weight-400 margin-reset montserrat" 
-                :class="{'text-center': direction === 'mid', 'text-left padding-left': direction === 'left', 'text-right padding-right': direction === 'right'}" 
+                :class="{'text-center': computedDirection === 'mid', 'text-left padding-left': computedDirection === 'left', 'text-right padding-right': computedDirection === 'right'}" 
                 :style="{ color: color }">{{skill}}</h3>
             <div class="psize" 
-                 :class="{'text-center': direction === 'mid', 'text-left padding-left': direction === 'left', 'text-right padding-right': direction === 'right'}">
+                 :class="{'text-center': computedDirection === 'mid', 'text-left padding-left': computedDirection === 'left', 'text-right padding-right': computedDirection === 'right'}">
                 <p class="black font-weight-300 quicksand">{{description}}</p>
             </div>
         </div>
     </div>
 </template>
 <script>
+const DEFAULT_SIZE = 339.292;
+const DIRECTION_MID = 'mid';
+const DIRECTION_LEFT = 'left';
+const DIRECTION_RIGHT = 'right';
+const FULL_CIRCLE_PERCENTAGE = 100;
+const EMPTY_CIRCLE_PERCENTAGE = 0;
+const TREE_DIGITS_X_AXIS = 36;
+const ONE_DIGITS_X_AXIS = 47;
+const DEFAULT_DIGITS_X_AXIS = 42;
+
 export default {
     name: 'CircleProgress',
+    introduction: 'Just a Circle Progress component!',
     props: {
         percentage: {
             type: Number,
-            default: 100
+            default: 100,
+            note: 'Describe the percentage of the circle. If decimal number was set, then, return a Math.round() of the value'
         },
         skill: {
-            type: String
+            type: String,
+            note: 'Main text of the circle'
         },
         description: {
-            type: String
+            type: String,
+            note: 'Secondary text of the circle'
         },
         direction: {
             type: String,
-            default: 'mid'
+            default: 'mid',
+            note: 'Describe the direction of text of the circle. Valid values are: mid (default) | left | right. If a invalida value was set, then, default value will be assigned'
         },
         color: {
             type: String,
-            default: "#D33573"
-        }
+            default: "#D33573",
+            note: 'A hex color of the circle, default is #D33573'
+        },
     },
     computed: {
         strokeDashoffset() {
-            if (this.percentage > 100) {
-                this.percentage = 100;
-            }
-            else if (this.percentage < 0) {
-                this.percentage = 0;
-            }
-            return 339.292 * (1 - (this.percentage / 100));
+            return DEFAULT_SIZE * (1 - (this.computedPercentage / FULL_CIRCLE_PERCENTAGE));
         },
         xAxis() {
-            if (this.percentage >= 100) {
-                return 36;
+            if (this.computedPercentage >= FULL_CIRCLE_PERCENTAGE) { return TREE_DIGITS_X_AXIS; } 
+            if (this.computedPercentage >= EMPTY_CIRCLE_PERCENTAGE && this.computedPercentage <=9) { return ONE_DIGITS_X_AXIS; }
+            return DEFAULT_DIGITS_X_AXIS;
+        },
+        computedDirection() {
+            if (this.direction !== DIRECTION_MID && 
+                this.direction !== DIRECTION_LEFT && 
+                this.direction !== DIRECTION_RIGHT) {
+                return DIRECTION_MID;
             }
-            else if (this.percentage >=0 && this.percentage <=9) {
-                return 47;
-            }
-            else {
-                return 42;
-            }
+            return this.direction;            
+        },
+        computedPercentage() {
+            let clonePercentage = Math.round(this.percentage);
+            if (clonePercentage > FULL_CIRCLE_PERCENTAGE) { return FULL_CIRCLE_PERCENTAGE; } 
+            if (clonePercentage < EMPTY_CIRCLE_PERCENTAGE) { return EMPTY_CIRCLE_PERCENTAGE; }
+            return clonePercentage;            
         }
-    }
+    },
 }
 </script>
