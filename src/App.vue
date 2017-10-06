@@ -20,37 +20,6 @@ export default {
     About,
     Skills,
     Portfolio
-  },
-  data() {
-    return {
-      enterActiveClass: "",
-      currRoute: "",
-      fromRouteCss: "",
-    }
-  },
-  computed: {
-    currentFlag () {
-      if (this.$i18n.locale() === 'pt') {
-        return '/src/assets/ptBR.png'
-      } else if (this.$i18n.locale() === 'en') {
-        return '/src/assets/enUS.png'
-      }
-    }
-  },
-  methods: {
-    changeLocale () {
-      if (this.$i18n.locale() === 'pt') {
-        this.$i18n.set('en');
-      } else if (this.$i18n.locale() === 'en') {
-        this.$i18n.set('pt');
-      }
-    }
-  },
-  created() {
-    this.$bus.$on('route-text', (text, color) => {
-      this.currRoute = text;
-      this.fromRouteCss = color;
-    });
   }
 }
 </script>

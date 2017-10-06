@@ -10,13 +10,19 @@
                         <h1 class="montserrat heading-margin pink bg-white heading-bg">{{'portfolioHeader' | translate | uppercase}}</h1>
                     </div>
                 </div>
+                <card></card>
+                <card></card>
+                <card></card>
             </div>
         </div>
     </section>
 </template>
 <script>
-
+import Card from '../components/Card.vue';
 export default {
-    name: 'Portfolio'
+    name: 'Portfolio',
+    components: {
+        Card
+    }
 }
 </script>

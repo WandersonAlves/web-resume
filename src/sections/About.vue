@@ -29,8 +29,8 @@ h4::first-letter
   .separator
     margin-top: 30px
     margin-bottom: 30px
-    margin-left: 20px
-    margin-right: 20px
+    margin-left: 0px
+    margin-right: 0px
   
   .separator-2
     margin-top: 30px
