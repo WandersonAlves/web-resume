@@ -10,9 +10,11 @@
                         <h1 class="montserrat heading-margin pink bg-white heading-bg">{{'portfolioHeader' | translate | uppercase}}</h1>
                     </div>
                 </div>
-                <card></card>
-                <card></card>
-                <card></card>
+                <div class="flex flex-dir-row flex-flow-wrap-row">
+                    <card></card>
+                    <card></card>
+                    <card></card>
+                </div>                
             </div>
         </div>
     </section>
