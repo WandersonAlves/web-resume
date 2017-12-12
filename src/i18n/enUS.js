@@ -3,6 +3,7 @@ export default {
   skillsHeader: 'Skills',
   contactHeader: 'Contact',
   portfolioHeader: 'Portfolio',
+  nomeCompletoName: 'NAME',
   aboutJavascript: 'The "JavaScripty" sexy experience',
   hobbies: 'Rhythm Games, Prog Music, Interestellar (best movie evar), etc...',
   homeFirstP: "Hi, Wanderson Alves over here!",

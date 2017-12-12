@@ -54,7 +54,7 @@ h4::first-letter
             </div>
             <span class="separator-2"></span>
             <div class="flex-align-self-center sm-text-center">
-              <h3 class="pink montserrat line-height-1">NOME COMPLETO</h3>
+              <h3 class="pink montserrat line-height-1">{{'nomeCompletoName' | translate}}</h3>
               <p class="black font-weight-300 open-sans font-size-11">Wanderson Alves Ferreira</p>
               <h3 class="pink montserrat line-height-1 padding-top-20">E-MAIL</h3>
               <p class="black font-weight-300 open-sans font-size-11">wandersonalvesferreira2012@gmail.com</p>
