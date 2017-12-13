@@ -20,26 +20,22 @@
 .flex-content-space-around
     justify-content: space-around
 
+.flex-justify-baseline
+    justify-content: baseline
+
 .flex-align-self-center
     align-self: center
 
 .flex-separator
     flex: 1 1 50%
 
-.flex-92
-    flex: 1 1 92%
-
-.flex-33
-    flex: 1 1 33%
-
-.flex-25
-    flex: 1 1 25%
-
-.flex-10
-    flex: 1 1 10%
-
 .flex-flow-wrap-row
     flex-flow: row wrap
+
+@for $i from 1 through 100
+    .flex-#{$i}
+        flex: 1 1 0% + $i
+        // max-width: 0% + $i
 
 @media(max-width: 959px)
     .flex-dir-row
