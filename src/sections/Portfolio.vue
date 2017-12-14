@@ -10,7 +10,7 @@
                         <h1 class="montserrat heading-margin pink bg-white heading-bg">{{'portfolioHeader' | translate | uppercase}}</h1>
                     </div>
                     <div class="flex flex-dir-row flex-wrap">
-                        <portfolio-item class="flex-50 margin-10" v-for="(item, index) in portfolioItens" :portfolioItem="item" :key='index'></portfolio-item>
+                        <portfolio-item class="flex-33 margin-10" v-for="(item, index) in portfolioItens" :portfolioItem="item" :key='index'></portfolio-item>
                     </div>
                 </div>
             </div>
