@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex';
 import vuexI18n from 'vuex-i18n';
-import VueAnalytics from 'vue-analytics';
 import App from './App.vue';
 
 import bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,9 +10,6 @@ import ptBRTranslate from './i18n/ptBR.js';
 import 'styles/_index.sass';
 
 Vue.use(Vuex);
-Vue.use(VueAnalytics, {
-  id: 'UA-104092834-1'
-});
 Vue.use(bootstrap);
 
 const enUS = enUSTranslate;
