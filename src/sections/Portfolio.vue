@@ -30,43 +30,51 @@ export default {
             {
                 name: 'TIM Network (Web)',
                 title1: this.$t('timText'),
-                title2: this.$t('timDateRange')
+                title2: this.$t('timDateRange'),
+                company: 'Accenture'
             },
             {
                 name: 'Galindo Serviços Eletricos(Web)',
                 title1: this.$t('galindoText'),
-                title2: this.$t('galindoDateRange')
+                title2: this.$t('galindoDateRange'),
+                company: 'Freelancer'
             },
             {
                 name: 'Philips Healthcare Tasy (Web)',
                 title1: this.$t('philipsText'),
-                title2: this.$t('philipsDateRange')
+                title2: this.$t('philipsDateRange'),
+                company: 'Accenture'
             },                     
             {
                 name: 'Porto Seguro (Web)',
                 title1: this.$t('portoText'),
-                title2: this.$t('portoDateRange')
+                title2: this.$t('portoDateRange'),
+                company: 'Accenture'
             },            
             {
                 name: 'JBV Tecnologia Elétrica (Web)',
                 title1: this.$t('jbvText'),
-                title2: this.$t('jbvDateRange')
+                title2: this.$t('jbvDateRange'),
+                company: 'Freelancer'
             },           
             {
                 name: 'BeerCalc App! (Web+Mobile+PWA)',
                 title1: this.$t('beercalcText'),
-                title2: this.$t('beercalcDateRange')
+                title2: this.$t('beercalcDateRange'),
+                company: 'Self'
             },
             {
                 name: 'Santander Lojistica (Web+Mobile)',
                 title1: this.$t('santanderText'),
-                title2: this.$t('santanderDateRange')
+                title2: this.$t('santanderDateRange'),
+                company: 'Accenture'
             },
             {
                 name: 'this (Web)',
                 title1: this.$t('thisText'),
                 title2: this.$t('thisDateRange'),
-                overrideLetter: 'T'
+                overrideLetter: 'T',
+                company: 'Self'
             },
             ]
         }

@@ -49,6 +49,7 @@
     </div>
     <div class="flex flex-dir-col">
         <h3 class="text-spacing private-text-center flex-33 white montserrat margin-reset font-weight-400 line-height-1">{{portfolioItem.name}}</h3>
+        <p class="italic text-spacing private-text-center flex-33 white quicksand margin-reset font-weight-300 word-wrap line-height-1">{{portfolioItem.company}}</p>
         <p class="text-spacing private-text-center flex-33 white quicksand margin-reset font-weight-300 word-wrap line-height-1">{{portfolioItem.title1}}</p>
         <p class="text-spacing private-text-center flex-33 white quicksand margin-reset font-weight-300 line-height-1">{{portfolioItem.title2}}</p>
     </div>
