@@ -26,25 +26,47 @@ export default {
     },
     data() {
         return {
-            portfolioItens: [{
-                name: 'Santander Lojistica (Web+Mobile)',
-                title1: 'Application that helps clients and merchants to simulate and finish floatation on Santander platform',
-                title2: 'Fev/2017 to Jul/2017'
+            portfolioItens: [
+            {
+                name: 'TIM Network (Web)',
+                title1: this.$t('timText'),
+                title2: this.$t('timDateRange')
             },
             {
-                name: 'BeerCalc App! (Web+Mobile+PWA)',
-                title1: 'PoC of CI/CD process and PWA application using AngularJS and NodeJS.',
-                title2: 'Ago/2016 - Fev/2017'
+                name: 'Galindo Serviços Eletricos(Web)',
+                title1: this.$t('galindoText'),
+                title2: this.$t('galindoDateRange')
             },
             {
                 name: 'Philips Healthcare Tasy (Web)',
-                title1: 'Complete and integrated hospital management software pioneer in Brazil, Tasy is a solution for hospitals, clinics, managed care plans, laboratories and diagnostic imaging centers. Developed in AngularJS using requireJS as dependency control.',
-                title2: 'Fev/2017 to Jul/2017'
+                title1: this.$t('philipsText'),
+                title2: this.$t('philipsDateRange')
+            },                     
+            {
+                name: 'Porto Seguro (Web)',
+                title1: this.$t('portoText'),
+                title2: this.$t('portoDateRange')
+            },            
+            {
+                name: 'JBV Tecnologia Elétrica (Web)',
+                title1: this.$t('jbvText'),
+                title2: this.$t('jbvDateRange')
+            },           
+            {
+                name: 'BeerCalc App! (Web+Mobile+PWA)',
+                title1: this.$t('beercalcText'),
+                title2: this.$t('beercalcDateRange')
             },
             {
-                name: 'TIM Network (Web)',
-                title1: 'Development of web systems for management and maintenance of telephone lines and financial area.',
-                title2: 'Fev/2017 to Jul/2017'
+                name: 'Santander Lojistica (Web+Mobile)',
+                title1: this.$t('santanderText'),
+                title2: this.$t('santanderDateRange')
+            },
+            {
+                name: 'this (Web)',
+                title1: this.$t('thisText'),
+                title2: this.$t('thisDateRange'),
+                overrideLetter: 'T'
             },
             ]
         }

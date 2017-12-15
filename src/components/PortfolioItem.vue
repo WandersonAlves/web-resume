@@ -73,7 +73,10 @@ export default {
       }
     },
     initialLetter() {
-      return this.portfolioItem.name.substring(0,1);
+      if (this.portfolioItem.overrideLetter) {
+        return this.portfolioItem.overrideLetter;
+      }
+      return this.portfolioItem.name.substring(0,1).toUpperCase();
     },
     randomColor() {
       const randomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
