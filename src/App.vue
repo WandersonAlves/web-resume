@@ -1,7 +1,7 @@
 <template>
   <div id="app" v-cloak>   
     <home></home>
-    <about></about>
+    <about ref="about"></about>
     <skills></skills>
     <portfolio></portfolio>
   </div>
