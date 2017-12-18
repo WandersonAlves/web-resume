@@ -25,6 +25,7 @@
     "file-loader": "^1.0.0",
     "font-awesome": "^4.7.0",
     "node-sass": "^4.5.3",
+    "prerender-node": "^2.7.4",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "vue": "^2.3.3",
