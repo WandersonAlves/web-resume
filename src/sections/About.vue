@@ -16,7 +16,7 @@
 h4
   font-size: 1.4em
   letter-spacing: 0.03em
-  line-height: 1.2em
+  line-height: 1.5em
 
 h4::first-letter 
   color: #D33575
