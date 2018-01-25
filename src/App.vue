@@ -4,6 +4,7 @@
     <about ref="about"></about>
     <skills></skills>
     <portfolio></portfolio>
+    <contact></contact>
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import Home from './sections/Home.vue';
 import About from './sections/About.vue';
 import Skills from './sections/Skills.vue';
 import Portfolio from './sections/Portfolio.vue';
+import Contact from './sections/Contact.vue';
 
 export default {
   name: 'app',
@@ -19,7 +21,8 @@ export default {
     Home,
     About,
     Skills,
-    Portfolio
+    Portfolio,
+    Contact
   }
 }
 </script>

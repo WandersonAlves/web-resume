@@ -36,7 +36,7 @@ h4::first-letter
     margin-top: 30px
   
   .sm-text-center
-    text-align: center;
+    text-align: center
 
 </style>
 <template>

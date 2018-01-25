@@ -3,9 +3,9 @@
   background: linear-gradient(270deg, #f4376d, #66349d);
   background-size: 400% 400%;
 
-  animation: AnimationName 30s ease infinite;
+  animation: GradientAnimation 30s ease infinite;
 }
-@keyframes AnimationName { 
+@keyframes GradientAnimation { 
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
@@ -20,10 +20,7 @@
 <template>
 <section>
     <div class="gradient-background container container-viewport">
-      <avatar v-once></avatar>      
-      <div class="arrow">
-        <arrow bounce direction="down" color="white"></arrow>
-      </div> 
+      <avatar v-once></avatar>
     </div>     
 </section>
 </template>
