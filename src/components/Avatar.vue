@@ -27,16 +27,6 @@
   margin-top: 25vh;
 }
 
-.icon-size {
-  font-size: 2.7em;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-.icon-fix {
-  font-size: 2.5em;
-}
-
 .container p {
   font-size: 20px;
   letter-spacing: 0.01em;
@@ -64,9 +54,6 @@
     width: 200px;
     height: 200px;
   }
-  .jumbotron p {
-    font-size: 1.2em;
-  }
 }
 
 </style>
@@ -81,11 +68,6 @@
     <p class="boldier quicksand white">{{ 'homeFirstP' | translate }}</p>
     <p class="boldier quicksand white">{{ 'homeSecondP' | translate }}</p>
     <p class="boldier quicksand white">{{ 'homeThirdP' | translate }}</p>
-    <a href="https://www.linkedin.com/in/wanderson-alves-575279a1/" target='noopener'><i class="fa fa-linkedin-square white icon-size" aria-hidden="true"></i></a>
-    <a href="https://github.com/WandersonAlves" target='noopener'><i class="fa fa-github white icon-size" aria-hidden="true"></i></a>
-    <a href="https://t.me/popoto900" target='noopener'><i class="fa fa-telegram white icon-fix icon-size" aria-hidden="true"></i></a>
-    <a href="https://twitter.com/Popoto_" target='noopener'><i class="fa fa-twitter white icon-size" aria-hidden="true"></i></a>
-    <a href="mailto:wandersonalvesferreira2012@gmail.com"><i class="fa fa-envelope white icon-fix icon-size" aria-hidden="true"></i></a>
   </div>
 </div>
 </template>
