@@ -41,4 +41,5 @@ export default {
   galindoDateRange: "June/2015 to August/2015",
   thisText: "Made with Vue 2.x",
   thisDateRange: "Infinity ∞",
+  contactText: "Don't be shy, contact me!",
 };
